@@ -16,4 +16,16 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
+
+    @RequestMapping("/hui")
+    public Greeting hui(@RequestParam(value="hui", defaultValue="Hui") String hui) {
+        return new Greeting(counter.incrementAndGet(),
+                String.format(template, hui));
+    }
+
+    @RequestMapping("/view-shop")
+    public Retriever viewShow(){
+        return new Retriever("view", 12);
+    }
+
 }
