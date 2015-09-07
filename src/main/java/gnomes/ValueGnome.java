@@ -1,4 +1,4 @@
-package db;
+package gnomes;
 
 /**
  * Created by deflo_000 on 05-Sep-15.
@@ -24,7 +24,7 @@ public class ValueGnome {
         this.gnome_name = gnome_name;
     }
 
-    public double getGnome_money() {
+    public int getGnome_money() {
         return gnome_money;
     }
 

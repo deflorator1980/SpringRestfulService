@@ -1,4 +1,4 @@
-package db;
+package gnomes;
 
 import org.springframework.jdbc.core.RowMapper;
 

@@ -1,4 +1,4 @@
-package db;
+package gnomes;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -14,8 +14,13 @@ public class ValueGnomeTemplate {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public List<ValueGnome> listValues(){
+    public List<ValueGnome> listGnomes(){
         String sql = "select * from gnomes";
         return jdbcTemplate.query(sql, new ValueMapperGnome());
+    }
+
+    public ValueGnome getGnome(String gnome_id){
+        String sql = "select * from gnomes where gnome_id = ?";
+        return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new ValueMapperGnome());
     }
 }
