@@ -23,4 +23,6 @@ public class ValueGnomeTemplate {
         String sql = "select * from gnomes where gnome_id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new ValueMapperGnome());
     }
+
+
 }

@@ -6,7 +6,6 @@ import java.sql.SQLException;
 
 public class Mappers implements RowMapper<Values> {
 
-    @Override
     public Values mapRow(ResultSet resultSet, int rowNum) throws SQLException {
         Values values = new Values();
         values.setGnome_name(resultSet.getString("gnome_name"));

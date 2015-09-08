@@ -21,4 +21,15 @@ public class Templates {
         String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id;";
         return jdbcTemplate.query(sql, new Mappers());
     }
+
+    public Values showGnome(String gnome_id){
+        String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id and gnomes.gnome_id = ?;";
+        return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new Mappers());
+    }
+
+    public List<Values> showGnome2(String gnome_id){
+        String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id and gnomes.gnome_id = " + gnome_id;
+        return jdbcTemplate.query(sql, new Mappers());
+    }
+//
 }
