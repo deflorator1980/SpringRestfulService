@@ -5,7 +5,7 @@ CREATE TABLE `game2`.`gnomes` (
   PRIMARY KEY (`gnome_id`)  COMMENT '');
 
 CREATE TABLE `game2`.`items` (
-  `item_id` INT NOT NULL COMMENT '',
+  `item_id` VARCHAR(45) NOT NULL COMMENT '',
   `item_name` VARCHAR(45) NOT NULL COMMENT '',
   `item_price` DECIMAL(8,2) NOT NULL COMMENT '',
   PRIMARY KEY (`item_id`)  COMMENT '');
@@ -30,6 +30,8 @@ INSERT INTO `game2`.`sales` (`sale_id`, `gnome_id`, `item_id`, `quantity`) VALUE
 INSERT INTO `game2`.`sales` (`sale_id`, `gnome_id`, `item_id`, `quantity`) VALUES ('20', '002', '02', '1');
 INSERT INTO `game2`.`sales` (`sale_id`, `gnome_id`, `item_id`, `quantity`) VALUES ('30', '002', '03', '4');
 INSERT INTO `game2`.`sales` (`sale_id`, `gnome_id`, `item_id`, `quantity`) VALUES ('40', '003', '02', '1');
+
+
 
 
 select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity

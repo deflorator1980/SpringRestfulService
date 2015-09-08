@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-    private static final String template = "Hello, %s!";
+    private static final String template = "%s";
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/greeting")
@@ -25,8 +25,13 @@ public class GreetingController {
 
     @RequestMapping("/hui")
     public Greeting hui(@RequestParam(value="hui", defaultValue="Hui") String hui) {
-        return new Greeting(counter.incrementAndGet(),
+        return new Greeting(1,
                 String.format(template, hui));
+    }
+    @RequestMapping("/hui2")
+    public Greeting hui2(@RequestParam(value="hui2", defaultValue="Hui") String hui2) {
+        return new Greeting(1,
+                String.format(template, hui2));
     }
 
     @RequestMapping("/view-shop")
@@ -43,29 +48,12 @@ public class GreetingController {
         retrieverSetter.setName("Vova");
         return  retrieverSetter;
     }
-    @RequestMapping("/db1")
-    public RetrieverSetter db1(){
-        String result;
-        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-        Templates templates = (Templates)ac.getBean("Templates");
-
-        Values value = templates.showGnome("001");
-        result = "\n\ngnome_name: " + value.getGnome_name() +
-                " gnome_money: " + value.getGnome_money() + " item_name: " + value.getItem_name()+
-                " quatity: " + value.getQuatity();
-
-        RetrieverSetter retrieverSetter = new RetrieverSetter();
-        retrieverSetter.setItem("nehui");
-        retrieverSetter.setPrice(11);
-        retrieverSetter.setName(result);
-        return  retrieverSetter;
-    }
 
     @RequestMapping("db2")
-    public Values db2(){
+    public Values db2(@RequestParam(value = "gnome_id", defaultValue = "001") String gnome_id){
         ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
         Templates templates = (Templates)ac.getBean("Templates");
-        Values value = templates.showGnome("001");
+        Values value = templates.showGnome(String.format(template, gnome_id));
         return value;
     }
 
