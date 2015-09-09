@@ -1,10 +1,10 @@
 package hello;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-import db_spring.Templates;
-import db_spring.Values;
+import db_spring.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,7 +49,7 @@ public class GreetingController {
         return  retrieverSetter;
     }
 
-    @RequestMapping("/list")
+    @RequestMapping("/map")
     public RetrieverMap showList(){
         RetrieverMap rl = new RetrieverMap();
         rl.setName("one");
@@ -61,6 +61,26 @@ public class GreetingController {
         arms.put("sward", 1);
         rl.setItemsFull(arms);
         return rl;
+    }
+    @RequestMapping("/showg")
+    public ValuesMap showG(@RequestParam(value = "gnome_id", defaultValue = "002")String gnome_id){
+        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
+        Templates templates = (Templates)ac.getBean("Templates");
+
+        ValuesGnome vg = templates.showValuesGnome(gnome_id);
+        List<ValuesItem> lvi = templates.showValuesItem(gnome_id);
+        ValuesMap vm = new ValuesMap();
+
+        vm.setGnome_name(vg.getGnome_name());
+        vm.setGnome_money(vg.getGnome_money());
+
+        HashMap<String, Integer> arms = new HashMap<>();
+        for (ValuesItem vi : lvi){
+            arms.put(vi.getItem_name(), vi.getQuantity());
+//            System.out.println(vi);
+        }
+        vm.setItems(arms);
+        return vm;
     }
 
     @RequestMapping("db2")

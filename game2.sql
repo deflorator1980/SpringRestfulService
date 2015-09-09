@@ -39,3 +39,5 @@ from gnomes, items, sales
 where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id;
 
 select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id;
+
+select items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id  and sales.item_id = items.item_id and gnomes.gnome_id = 002#gnome_name = 'dasha'
