@@ -1,6 +1,6 @@
 package hello;
 
-import java.util.List;
+import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 import db_spring.Templates;
@@ -49,11 +49,26 @@ public class GreetingController {
         return  retrieverSetter;
     }
 
+    @RequestMapping("/list")
+    public RetrieverMap showList(){
+        RetrieverMap rl = new RetrieverMap();
+        rl.setName("one");
+        rl.setMoney("a lot");
+
+        HashMap<String, Integer> arms = new HashMap<>();
+        arms.put("spear", 1);
+        arms.put("shell", 5);
+        arms.put("sward", 1);
+        rl.setItemsFull(arms);
+        return rl;
+    }
+
     @RequestMapping("db2")
     public Values db2(@RequestParam(value = "gnome_id", defaultValue = "001") String gnome_id){
         ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
         Templates templates = (Templates)ac.getBean("Templates");
-        Values value = templates.showGnome(String.format(template, gnome_id));
+//        Values value = templates.showGnome(String.format(template, gnome_id));
+        Values value = templates.showGnome(gnome_id);
         return value;
     }
 
