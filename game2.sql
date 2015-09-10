@@ -1,13 +1,13 @@
 CREATE TABLE `game2`.`gnomes` (
   `gnome_id` VARCHAR(45) NOT NULL COMMENT '',
   `gnome_name` VARCHAR(45) NOT NULL COMMENT '',
-  `gnome_money` DECIMAL(8,2) NULL COMMENT '',
+  `gnome_money` INT NULL COMMENT '',
   PRIMARY KEY (`gnome_id`)  COMMENT '');
 
 CREATE TABLE `game2`.`items` (
   `item_id` VARCHAR(45) NOT NULL COMMENT '',
   `item_name` VARCHAR(45) NOT NULL COMMENT '',
-  `item_price` DECIMAL(8,2) NOT NULL COMMENT '',
+  `item_price` INT NOT NULL COMMENT '',
   PRIMARY KEY (`item_id`)  COMMENT '');
 
 CREATE TABLE `game2`.`sales` (
@@ -16,6 +16,9 @@ CREATE TABLE `game2`.`sales` (
   `item_id` VARCHAR(45) NOT NULL COMMENT '',
   `quantity` INT NOT NULL COMMENT '',
   PRIMARY KEY (`sale_id`)  COMMENT '');
+
+alter table sales add constraint fk_sales_gnomes foreign key (gnome_id) references gnomes (gnome_id);
+alter table sales add constraint fk_sales_items foreign key (item_id) references items (item_id);
 
 INSERT INTO `game2`.`gnomes` (`gnome_id`, `gnome_name`, `gnome_money`) VALUES ('001', 'vova', '23');
 INSERT INTO `game2`.`gnomes` (`gnome_id`, `gnome_name`, `gnome_money`) VALUES ('002', 'dasha', '34');
