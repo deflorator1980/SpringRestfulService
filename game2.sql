@@ -1,3 +1,5 @@
+CREATE SCHEMA `game2` ;
+
 CREATE TABLE `game2`.`gnomes` (
   `gnome_id` VARCHAR(45) NOT NULL COMMENT '',
   `gnome_name` VARCHAR(45) NOT NULL COMMENT '',
@@ -17,8 +19,9 @@ CREATE TABLE `game2`.`sales` (
   `quantity` INT NOT NULL COMMENT '',
   PRIMARY KEY (`sale_id`)  COMMENT '');
 
-alter table sales add constraint fk_sales_gnomes foreign key (gnome_id) references gnomes (gnome_id);
-alter table sales add constraint fk_sales_items foreign key (item_id) references items (item_id);
+alter table game2.sales add constraint fk_sales_gnomes foreign key (gnome_id) references game2.gnomes (gnome_id);
+alter table game2.sales add constraint fk_sales_items foreign key (item_id) references game2.items (item_id);
+
 
 INSERT INTO `game2`.`gnomes` (`gnome_id`, `gnome_name`, `gnome_money`) VALUES ('001', 'vova', '23');
 INSERT INTO `game2`.`gnomes` (`gnome_id`, `gnome_name`, `gnome_money`) VALUES ('002', 'dasha', '34');
