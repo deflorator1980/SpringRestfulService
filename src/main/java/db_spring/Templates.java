@@ -1,5 +1,6 @@
 package db_spring;
 
+import hello.Buy;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -22,9 +23,6 @@ public class Templates {
         return jdbcTemplate.query(sql, new Mappers());
     }
 
-
-
-
     public Values showGnome(String gnome_id){
         String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id and gnomes.gnome_id = ?;";
         return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new Mappers());
@@ -44,4 +42,12 @@ public class Templates {
         String sql = "select items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id  and sales.item_id = items.item_id and gnomes.gnome_id =" + gnome_id;
         return jdbcTemplate.query(sql, new MappersItem());
     }
+
+
+    public void buyItemNew(String gnome_id, String item_id){
+        String sql = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 1);";
+        jdbcTemplate.update(sql, gnome_id, item_id);
+    }
+
+
 }
