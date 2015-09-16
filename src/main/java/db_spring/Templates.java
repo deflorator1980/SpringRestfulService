@@ -3,7 +3,12 @@ package db_spring;
 import hello.Buy;
 import hello.MapperMoney;
 import hello.Money;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import javax.sql.DataSource;
 import java.util.List;
@@ -14,10 +19,15 @@ import java.util.List;
 public class Templates {
     private DataSource dataSource;
     private JdbcTemplate jdbcTemplate;
+    private PlatformTransactionManager transactionManager;
 
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
+
+    public void setTransactionManager(PlatformTransactionManager transactionManager) {
+        this.transactionManager = transactionManager;
     }
 
     public List<Values> showValues(){
@@ -47,11 +57,20 @@ public class Templates {
 
 
     public void buyItemNew(String gnome_id, String item_id){
-        String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-5 WHERE gnome_id=001";
-        jdbcTemplate.update(sqlGiveMoney);
+        TransactionDefinition def = new DefaultTransactionDefinition();
+        TransactionStatus status = transactionManager.getTransaction(def);
 
-        String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 2);";
-        jdbcTemplate.update(sqlGetItem, gnome_id, item_id);
+        try {
+            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-5 WHERE gnome_id=001";
+            jdbcTemplate.update(sqlGiveMoney);
+
+            String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 2);";
+            jdbcTemplate.update(sqlGetItem, gnome_id, item_id);
+
+            transactionManager.commit(status);
+        }catch (DataAccessException dae){
+            transactionManager.rollback(status);
+        }
 
     }
 
