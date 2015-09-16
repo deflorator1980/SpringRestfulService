@@ -1,6 +1,8 @@
 package db_spring;
 
 import hello.Buy;
+import hello.MapperMoney;
+import hello.Money;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -45,8 +47,17 @@ public class Templates {
 
 
     public void buyItemNew(String gnome_id, String item_id){
-        String sql = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 1);";
-        jdbcTemplate.update(sql, gnome_id, item_id);
+        String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-5 WHERE gnome_id=001";
+        jdbcTemplate.update(sqlGiveMoney);
+
+        String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 2);";
+        jdbcTemplate.update(sqlGetItem, gnome_id, item_id);
+
+    }
+
+    public Money getMoney(String gnome_id){
+        String sql = "SELECT gnome_money FROM gnomes WHERE gnome_id = ?";
+        return (Money) jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MapperMoney());
     }
 
 

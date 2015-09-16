@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 
     private static final String template = "%s";
+    private static final int princeSword = 5;
+    private static final int princeSpear = 3;
+    private static final int princeGrenade = 1;
     private final AtomicLong counter = new AtomicLong();
 
     ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
@@ -31,18 +34,8 @@ public class GreetingController {
         return new Nil("Hello");
     }
 
-    @RequestMapping("/buy")
-    public Buy buy(@RequestParam(value="item_id")String item_id){
-        templates.buyItemNew("001", item_id);
-        Buy b = new Buy();
-        b.setItem_name(item_id);
-        return b;
-    }
-
     @RequestMapping("/my-info")
     public ValuesMap showG(@RequestParam(value = "gnome_id", defaultValue = "002")String gnome_id){
-//        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-//        Templates templates = (Templates)ac.getBean("Templates");
 
         ValuesGnome vg = templates.showValuesGnome(gnome_id);
 
@@ -59,6 +52,28 @@ public class GreetingController {
         }
         vm.setItems(arms);
         return vm;
+    }
+
+    @RequestMapping("/buy")
+    public Buy buy(@RequestParam(value="item_id")String item_id){
+
+        Money money = templates.getMoney("001");
+
+        Buy b = new Buy();
+
+        int currentMoney = money.getRubles();
+
+        if(princeSword > currentMoney){
+            b.setError_code("Not enought money");
+        }
+        else {
+            templates.buyItemNew("001", item_id);
+            b.setItem_name(item_id);
+            b.setError_code("OK");
+
+        }
+        System.out.println(money.getRubles());
+        return b;
     }
 
 
