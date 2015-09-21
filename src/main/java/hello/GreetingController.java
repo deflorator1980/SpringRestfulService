@@ -29,10 +29,10 @@ public class GreetingController {
                 String.format(template, name));
     }
 
-    @RequestMapping("/")
-    public Nil nil(String hello){
-        return new Nil("Hello");
-    }
+//    @RequestMapping("/")
+//    public Nil nil(String hello){
+//        return new Nil("Hello");
+//    }
 
     @RequestMapping("/my-info")
     public ValuesMap showG(@RequestParam(value = "gnome_id", defaultValue = "002")String gnome_id){

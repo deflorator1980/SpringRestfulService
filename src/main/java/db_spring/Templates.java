@@ -64,9 +64,6 @@ public class Templates {
         try {
             String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-5 WHERE gnome_id=001";
             jdbcTemplate.update(sqlGiveMoney);
-            System.out.println("Got money!");
-
-//            jdbcTemplate.update("hui");
 
             String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 2);";
             jdbcTemplate.update(sqlGetItem, gnome_id, item_id);
