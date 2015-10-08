@@ -7,6 +7,8 @@ import java.util.concurrent.atomic.AtomicLong;
 import db_spring.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,6 +38,28 @@ public class GreetingController {
 
     @RequestMapping("/my-info")
     public ValuesMap showG(@RequestParam(value = "gnome_id", defaultValue = "002")String gnome_id){
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        gnome_id = userDetails.getUsername();
+
+        ValuesGnome vg = templates.showValuesGnome(gnome_id);
+
+        List<ValuesItem> lvi = templates.showValuesItem(gnome_id);
+
+        ValuesMap vm = new ValuesMap();
+
+        vm.setGnome_name(vg.getGnome_name());
+        vm.setGnome_money(vg.getGnome_money());
+
+        HashMap<String, Integer> arms = new HashMap<>();
+        for (ValuesItem vi : lvi){
+            arms.put(vi.getItem_name(), vi.getQuantity());
+        }
+        vm.setItems(arms);
+        return vm;
+    }
+
+    @RequestMapping("/my-info-old")
+    public ValuesMap showGold(@RequestParam(value = "gnome_id")String gnome_id){
 
         ValuesGnome vg = templates.showValuesGnome(gnome_id);
 
