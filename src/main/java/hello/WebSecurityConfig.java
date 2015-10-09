@@ -21,6 +21,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")
                 .permitAll()
                 .and()
+                .csrf().disable()
             .logout()
                 .permitAll();
     }
@@ -31,8 +32,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .inMemoryAuthentication()
                 .withUser("001").password("a").roles("USER")
                 .and()
-                .withUser("002").password("a").roles("USER");
-
+                .withUser("002").password("b").roles("USER")
+                .and()
+                .withUser("003").password("c").roles("USER");
 
     }
 }

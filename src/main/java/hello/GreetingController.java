@@ -7,6 +7,8 @@ import java.util.concurrent.atomic.AtomicLong;
 import db_spring.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +20,7 @@ public class GreetingController {
     private static final int princeSword = 5;
     private static final int princeSpear = 3;
     private static final int princeGrenade = 1;
+    private static String gnome_id;
     private final AtomicLong counter = new AtomicLong();
 
     ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
@@ -29,13 +32,16 @@ public class GreetingController {
                 String.format(template, name));
     }
 
-//    @RequestMapping("/")
-//    public Nil nil(String hello){
-//        return new Nil("Hello");
-//    }
+    @RequestMapping("/")
+    public Nil nil(String hello){
+        return new Nil("Hello");
+    }
 
     @RequestMapping("/my-info")
-    public ValuesMap showG(@RequestParam(value = "gnome_id", defaultValue = "002")String gnome_id){
+    public ValuesMap showG(){
+
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        gnome_id = userDetails.getUsername();
 
         ValuesGnome vg = templates.showValuesGnome(gnome_id);
 
@@ -57,7 +63,7 @@ public class GreetingController {
     @RequestMapping("/buy")
     public Buy buy(@RequestParam(value="item_id")String item_id){
 
-        Money money = templates.getMoney("001");
+        Money money = templates.getMoney(gnome_id);
 
         Buy b = new Buy();
 
@@ -67,7 +73,7 @@ public class GreetingController {
             b.setError_code("Not enought money");
         }
         else {
-            templates.buyItemNew("001", item_id);
+            templates.buyItemNew(gnome_id, item_id);
             b.setItem_name(item_id);
             b.setError_code("OK");
 
