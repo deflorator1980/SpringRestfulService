@@ -18,27 +18,28 @@ public class GreetingController {
 
     private static final String template = "%s";
     private static final int princeSword = 5;
+    private static int itemPice;
     private static final int princeSpear = 3;
     private static final int princeGrenade = 1;
     private static String gnome_id;
     private final AtomicLong counter = new AtomicLong();
 
     ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-    Templates templates = (Templates)ac.getBean("Templates");
+    Templates templates = (Templates) ac.getBean("Templates");
 
     @RequestMapping("/greeting")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
+    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
 
     @RequestMapping("/")
-    public Nil nil(String hello){
+    public Nil nil(String hello) {
         return new Nil("Hello");
     }
 
     @RequestMapping("/my-info")
-    public ValuesMap showG(){
+    public ValuesMap showG() {
 
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         gnome_id = userDetails.getUsername();
@@ -53,7 +54,7 @@ public class GreetingController {
         vm.setGnome_money(vg.getGnome_money());
 
         HashMap<String, Integer> arms = new HashMap<>();
-        for (ValuesItem vi : lvi){
+        for (ValuesItem vi : lvi) {
             arms.put(vi.getItem_name(), vi.getQuantity());
         }
         vm.setItems(arms);
@@ -61,7 +62,7 @@ public class GreetingController {
     }
 
     @RequestMapping("/buy")
-    public Buy buy(@RequestParam(value="item_id")String item_id){
+    public Buy buy(@RequestParam(value = "item_id") String item_id) {
 
         Money money = templates.getMoney(gnome_id);
 
@@ -69,11 +70,36 @@ public class GreetingController {
 
         int currentMoney = money.getRubles();
 
-        if(princeSword > currentMoney){
-            b.setError_code("Not enought money");
+        switch (item_id) {
+            case "01":
+                itemPice = 5;
+                break;
+            case "02":
+                itemPice = 2;
+                break;
+            case "03":
+                itemPice = 1;
+                break;
         }
-        else {
-            templates.buyItemNew(gnome_id, item_id);
+//                                                                  проверка на повторяемость итемов
+
+        List<BaughtItem> lbi = templates.getBaughtItem(gnome_id);
+
+        for (BaughtItem bi : lbi) {
+            if (bi.getItem().equals(item_id)) {
+                templates.buyItemOld(gnome_id, item_id, itemPice);
+                b.setItem_name(item_id);
+                b.setError_code("OK");
+//                b.setError_code("You have it already");
+//                b.setItem_name("Nothing baught");
+                return b;
+            }
+        }
+
+        if (princeSword > currentMoney) {
+            b.setError_code("Not enought money");
+        } else {
+            templates.buyItemNew(gnome_id, item_id, itemPice);
             b.setItem_name(item_id);
             b.setError_code("OK");
 

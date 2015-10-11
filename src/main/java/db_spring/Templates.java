@@ -1,8 +1,6 @@
 package db_spring;
 
-import hello.Buy;
-import hello.MapperMoney;
-import hello.Money;
+import hello.*;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -57,15 +55,15 @@ public class Templates {
     }
 
 
-    public void buyItemNew(String gnome_id, String item_id){
+    public void buyItemNew(String gnome_id, String item_id, int itemPrice){
         TransactionDefinition def = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(def);
 
         try {
-            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-5 WHERE gnome_id=" + gnome_id;
+            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-" + itemPrice + " WHERE gnome_id=" + gnome_id;
             jdbcTemplate.update(sqlGiveMoney);
 
-            String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 3);";
+            String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 1);";
             jdbcTemplate.update(sqlGetItem, gnome_id, item_id);
 
             transactionManager.commit(status);
@@ -83,5 +81,29 @@ public class Templates {
         return (Money) jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MapperMoney());
     }
 
+    public List<BaughtItem> getBaughtItem(String gnome_id){
+        String sql = "select item_id from sales where gnome_id=" + gnome_id;
+        return jdbcTemplate.query(sql, new MapperBaughtItem());
+    }
+
+    public void buyItemOld(String gnome_id, String item_id, int itemPrice){
+        TransactionDefinition def = new DefaultTransactionDefinition();
+        TransactionStatus status = transactionManager.getTransaction(def);
+
+        try{
+            String sqlIncQuantity = "update sales set quantity=quantity+1 where gnome_id="+gnome_id+" and item_id="+item_id;
+            jdbcTemplate.update(sqlIncQuantity);
+
+            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-"+itemPrice+" WHERE gnome_id=" + gnome_id;
+            jdbcTemplate.update(sqlGiveMoney);
+
+            transactionManager.commit(status);
+
+        }catch(DataAccessException dae){
+            System.out.println("Error in creating record, rolling back");
+            transactionManager.rollback(status);
+            throw dae;
+        }
+    }
 
 }
