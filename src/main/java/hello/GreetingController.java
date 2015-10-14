@@ -108,5 +108,39 @@ public class GreetingController {
         return b;
     }
 
+    @RequestMapping("/sell")
+    public Buy sell(@RequestParam(value = "item_id") String item_id){
+        Buy b = new Buy();
+
+        switch (item_id) {
+            case "01":
+                itemPice = 5;
+                break;
+            case "02":
+                itemPice = 2;
+                break;
+            case "03":
+                itemPice = 1;
+                break;
+        }
+
+        List<BaughtItem> lbi = templates.getBaughtItem(gnome_id);
+
+        for (BaughtItem bi : lbi) {
+            if (bi.getItem().equals(item_id)) {
+                templates.sellItemOld(gnome_id, item_id, itemPice);
+                b.setItem_name(item_id);
+                b.setError_code("OK");
+//                b.setError_code("You have it already");
+//                b.setItem_name("Nothing baught");
+                return b;
+            }else{
+                b.setError_code("You haven't this item");
+            }
+        }
+
+
+        return b;
+    }
 
 }

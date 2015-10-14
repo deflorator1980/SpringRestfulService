@@ -29,38 +29,45 @@ public class Templates {
         this.transactionManager = transactionManager;
     }
 
-    public List<Values> showValues(){
-        String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id;";
+    public List<Values> showValues() {
+        String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity" +
+                " from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id;";
         return jdbcTemplate.query(sql, new Mappers());
     }
 
-    public Values showGnome(String gnome_id){
-        String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id and gnomes.gnome_id = ?;";
+    public Values showGnome(String gnome_id) {
+        String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity" +
+                " from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and" +
+                " sales.item_id = items.item_id and gnomes.gnome_id = ?;";
         return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new Mappers());
     }
 
-    public List<Values> showGnome2(String gnome_id){
-        String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and sales.item_id = items.item_id and gnomes.gnome_id = " + gnome_id;
+    public List<Values> showGnome2(String gnome_id) {
+        String sql = "select gnomes.gnome_name, gnomes.gnome_money, items.item_name, sales.quantity" +
+                " from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id and " +
+                "sales.item_id = items.item_id and gnomes.gnome_id = " + gnome_id;
         return jdbcTemplate.query(sql, new Mappers());
     }
 
-    public ValuesGnome showValuesGnome(String gnome_id){
+    public ValuesGnome showValuesGnome(String gnome_id) {
         String sql = "select gnome_name, gnome_money from gnomes where gnome_id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MappersGnome());
     }
 
-    public List<ValuesItem> showValuesItem(String gnome_id){
-        String sql = "select items.item_name, sales.quantity from gnomes, items, sales where gnomes.gnome_id = sales.gnome_id  and sales.item_id = items.item_id and gnomes.gnome_id =" + gnome_id;
+    public List<ValuesItem> showValuesItem(String gnome_id) {
+        String sql = "select items.item_name, sales.quantity from gnomes, items, sales where" +
+                " gnomes.gnome_id = sales.gnome_id  and sales.item_id = items.item_id and gnomes.gnome_id =" + gnome_id;
         return jdbcTemplate.query(sql, new MappersItem());
     }
 
 
-    public void buyItemNew(String gnome_id, String item_id, int itemPrice){
+    public void buyItemNew(String gnome_id, String item_id, int itemPrice) {
         TransactionDefinition def = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(def);
 
         try {
-            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-" + itemPrice + " WHERE gnome_id=" + gnome_id;
+            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-" + itemPrice
+                    + " WHERE gnome_id=" + gnome_id;
             jdbcTemplate.update(sqlGiveMoney);
 
             String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 1);";
@@ -68,7 +75,7 @@ public class Templates {
 
             transactionManager.commit(status);
 
-        }catch (DataAccessException dae){
+        } catch (DataAccessException dae) {
             System.out.println("Error in creating record, rolling back");
             transactionManager.rollback(status);
             throw dae;
@@ -76,30 +83,74 @@ public class Templates {
 
     }
 
-    public Money getMoney(String gnome_id){
+    public Money getMoney(String gnome_id) {
         String sql = "SELECT gnome_money FROM gnomes WHERE gnome_id = ?";
         return (Money) jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MapperMoney());
     }
 
-    public List<BaughtItem> getBaughtItem(String gnome_id){
+    public List<BaughtItem> getBaughtItem(String gnome_id) {
         String sql = "select item_id from sales where gnome_id=" + gnome_id;
         return jdbcTemplate.query(sql, new MapperBaughtItem());
     }
 
-    public void buyItemOld(String gnome_id, String item_id, int itemPrice){
+    public void buyItemOld(String gnome_id, String item_id, int itemPrice) {
         TransactionDefinition def = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(def);
 
-        try{
-            String sqlIncQuantity = "update sales set quantity=quantity+1 where gnome_id="+gnome_id+" and item_id="+item_id;
+        try {
+            String sqlIncQuantity = "update sales set quantity=quantity+1 where gnome_id="
+                    + gnome_id + " and item_id=" + item_id;
             jdbcTemplate.update(sqlIncQuantity);
 
-            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-"+itemPrice+" WHERE gnome_id=" + gnome_id;
+            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-" + itemPrice
+                    + " WHERE gnome_id=" + gnome_id;
             jdbcTemplate.update(sqlGiveMoney);
 
             transactionManager.commit(status);
 
-        }catch(DataAccessException dae){
+        } catch (DataAccessException dae) {
+            System.out.println("Error in creating record, rolling back");
+            transactionManager.rollback(status);
+            throw dae;
+        }
+    }
+
+    public void sellItemLast(String gnome_id, String item_id, int itemPrice) {
+        TransactionDefinition def = new DefaultTransactionDefinition();
+        TransactionStatus status = transactionManager.getTransaction(def);
+
+        try {
+            String sqlTakeMoney = "update gnomes set gnome_money=gnome_money+"
+                    + itemPrice + "whree gnome_id=" + gnome_id;
+            jdbcTemplate.update(sqlTakeMoney);
+            String sqlDeleteSale = "delete from sales where item_id=" + item_id + " and gnome_id=" + gnome_id;
+            jdbcTemplate.update(sqlDeleteSale);
+            transactionManager.commit(status);
+
+
+        }catch (DataAccessException dae){
+            System.out.println("Error in creating record, rolling back");
+            transactionManager.rollback(status);
+            throw dae;
+        }
+    }
+
+    public void sellItemOld(String gnome_id, String item_id, int itemPrice) {
+        TransactionDefinition def = new DefaultTransactionDefinition();
+        TransactionStatus status = transactionManager.getTransaction(def);
+
+        try {
+            String sqlDecQuantity = "update sales set quantity=quantity-1 where gnome_id="
+                    + gnome_id + " and item_id=" + item_id;
+            jdbcTemplate.update(sqlDecQuantity);
+
+            String sqlTakeMoney = "update gnomes set gnome_money=gnome_money+" + itemPrice
+                    + " where gnome_id=" + gnome_id;
+            jdbcTemplate.update(sqlTakeMoney);
+
+            transactionManager.commit(status);
+
+        } catch (DataAccessException dae) {
             System.out.println("Error in creating record, rolling back");
             transactionManager.rollback(status);
             throw dae;
