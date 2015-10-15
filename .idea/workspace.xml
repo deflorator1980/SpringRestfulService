@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/items.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/Shop.java" afterPath="$PROJECT_DIR$/src/main/java/hello/Shop.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello/GreetingController.class" afterPath="$PROJECT_DIR$/target/classes/hello/GreetingController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello/Shop.class" afterPath="$PROJECT_DIR$/target/classes/hello/Shop.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SpringRestfulService.iws" />
@@ -31,8 +30,8 @@
       <file leaf-file-name="GreetingController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35096154">
-              <caret line="168" column="20" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.53125">
+              <caret line="119" column="25" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -601,7 +600,7 @@
       <workItem from="1444723578532" duration="1811000" />
       <workItem from="1444818144764" duration="10336000" />
       <workItem from="1444874436626" duration="7211000" />
-      <workItem from="1444934142820" duration="4960000" />
+      <workItem from="1444934142820" duration="5077000" />
     </task>
     <task id="LOCAL-00001" summary="buy prerfect">
       <created>1444607963947</created>
@@ -621,11 +620,17 @@
       <option name="project" value="LOCAL" />
       <updated>1444875230967</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="view-shop">
+      <created>1444940502486</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1444940502486</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37092000" />
+    <option name="totallyTimeSpent" value="37209000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -674,7 +679,8 @@
     <MESSAGE value="buy prerfect" />
     <MESSAGE value="try sell" />
     <MESSAGE value="sell works" />
-    <option name="LAST_COMMIT_MESSAGE" value="sell works" />
+    <MESSAGE value="view-shop" />
+    <option name="LAST_COMMIT_MESSAGE" value="view-shop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1100,8 +1106,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35096154">
-          <caret line="168" column="20" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.53125">
+          <caret line="119" column="25" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
