@@ -81,7 +81,11 @@ public class GreetingController {
                 itemPice = 1;
                 break;
         }
-//                                                                  проверка на повторяемость итемов
+
+        if (itemPice > currentMoney){
+            b.setError_code("Not enough money");
+            return b;
+        }
 
         List<BaughtItem> lbi = templates.getBaughtItem(gnome_id);
 
@@ -90,27 +94,19 @@ public class GreetingController {
                 templates.buyItemOld(gnome_id, item_id, itemPice);
                 b.setItem_name(item_id);
                 b.setError_code("OK");
-//                b.setError_code("You have it already");
-//                b.setItem_name("Nothing baught");
                 return b;
             }
         }
-
-        if (princeSword > currentMoney) {
-            b.setError_code("Not enought money");
-        } else {
             templates.buyItemNew(gnome_id, item_id, itemPice);
             b.setItem_name(item_id);
             b.setError_code("OK");
-
-        }
-        System.out.println(money.getRubles());
         return b;
     }
 
     @RequestMapping("/sell")
     public Buy sell(@RequestParam(value = "item_id") String item_id) {
         int quantity = 0;
+        String item;
         Buy b = new Buy();
 
         switch (item_id) {
@@ -128,25 +124,28 @@ public class GreetingController {
         List<BaughtItem> lbi = templates.getBaughtItem(gnome_id);
 
         for (BaughtItem bi : lbi) {
-//            quantity = bi.getQuantity();
-            if (bi.getItem().equals(item_id) && (bi.getQuantity() > 1)) {
+            quantity = bi.getQuantity();
+            item = bi.getItem();
+            if (item.equals(item_id) && (quantity > 1)) {
                 templates.sellItemOld(gnome_id, item_id, itemPice);
                 b.setItem_name(item_id);
                 b.setError_code("OK");
-                System.out.println(quantity + " sellItemOld");
                 return b;
-            } else if (bi.getItem().equals(item_id) && bi.getQuantity() == 1) {
+            } else if (item.equals(item_id) && quantity == 1) {
                 templates.sellItemLast(gnome_id, item_id, itemPice);
                 b.setItem_name(item_id);
                 b.setError_code("OK");
-                System.out.println(bi.getQuantity() + " sellItemLast");
                 return b;
             }
         }
         b.setError_code("You haven't this item");
-        System.out.println(quantity + " no item");
         return b;
-
     }
+
+    @RequestMapping("/view-shop")
+    public Shop viewShop(){
+        return new Shop("sword", 5);
+    }
+
 
 }
