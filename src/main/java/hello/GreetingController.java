@@ -85,7 +85,7 @@ public class GreetingController {
     }
 
     @RequestMapping("/buy")
-    public Buy buy(@RequestParam(value = "item_id") String item_id) {
+    public Buy buy(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
 
         Money money = templates.getMoney(gnome_id);
 
@@ -93,16 +93,12 @@ public class GreetingController {
 
         int currentMoney = money.getRubles();
 
-        switch (item_id) {
-            case "01":
-                itemPice = 5;
-                break;
-            case "02":
-                itemPice = 2;
-                break;
-            case "03":
-                itemPice = 1;
-                break;
+        List<Shop> shop = viewShop();
+
+        for(Shop sp : shop) {
+            if (sp.getId().equals(item_id)) {
+                itemPice = sp.getPrice();
+            }
         }
 
         if (itemPice > currentMoney){
@@ -127,21 +123,17 @@ public class GreetingController {
     }
 
     @RequestMapping("/sell")
-    public Buy sell(@RequestParam(value = "item_id") String item_id) {
+    public Buy sell(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
         int quantity = 0;
         String item;
         Buy b = new Buy();
 
-        switch (item_id) {
-            case "01":
-                itemPice = 5;
-                break;
-            case "02":
-                itemPice = 2;
-                break;
-            case "03":
-                itemPice = 1;
-                break;
+        List<Shop> shop = viewShop();
+
+        for(Shop sp : shop) {
+            if (sp.getId().equals(item_id)) {
+                itemPice = sp.getPrice();
+            }
         }
 
         List<BaughtItem> lbi = templates.getBaughtItem(gnome_id);
@@ -190,6 +182,7 @@ public class GreetingController {
         }
         return everyThing;
     }
+
 
 
 }
