@@ -13,6 +13,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+
 @RestController
 public class GreetingController {
 
@@ -26,6 +44,11 @@ public class GreetingController {
 
     ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
     Templates templates = (Templates) ac.getBean("Templates");
+
+    public  Node weapons;
+    public  Document doc;
+    public  int idNext;
+    public  String filepath = "items.xml";
 
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
@@ -143,8 +166,29 @@ public class GreetingController {
     }
 
     @RequestMapping("/view-shop")
-    public Shop viewShop(){
-        return new Shop("sword", 5);
+    public List<Shop> viewShop() throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+        doc = docBuilder.parse(filepath);
+        weapons = doc.getElementsByTagName("weapons").item(0);
+
+        List<Shop> everyThing = new ArrayList<>();
+
+        Shop shop = null;
+
+        NodeList list = weapons.getChildNodes();
+        int lenght = list.getLength();
+        for (int i = 0; i < lenght; i++) {
+            Node node = list.item(i);
+            if ("weapon".equals(node.getNodeName())) {
+                shop = new Shop();
+                shop.setId(node.getAttributes().getNamedItem("id").getTextContent());
+                shop.setName(((Element)node).getElementsByTagName("name").item(0).getTextContent());
+                shop.setPrice(Integer.parseInt(((Element) node).getElementsByTagName("price").item(0).getTextContent()));
+                everyThing.add(shop);
+            }
+        }
+        return everyThing;
     }
 
 

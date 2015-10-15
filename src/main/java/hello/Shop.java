@@ -1,22 +1,40 @@
 package hello;
 
-/**
- * Created by a on 15.10.15.
- */
 public class Shop {
-    String item_name;
-    int item_price;
+    private String id;
+    private String name;
+    private int price;
 
-    public Shop(String item_name, int item_price) {
-        this.item_name = item_name;
-        this.item_price = item_price;
+    public String getId() {
+        return id;
     }
 
-    public String getItem_name() {
-        return item_name;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public int getItem_price() {
-        return item_price;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
