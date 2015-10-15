@@ -109,7 +109,8 @@ public class GreetingController {
     }
 
     @RequestMapping("/sell")
-    public Buy sell(@RequestParam(value = "item_id") String item_id){
+    public Buy sell(@RequestParam(value = "item_id") String item_id) {
+        int quantity = 0;
         Buy b = new Buy();
 
         switch (item_id) {
@@ -127,20 +128,25 @@ public class GreetingController {
         List<BaughtItem> lbi = templates.getBaughtItem(gnome_id);
 
         for (BaughtItem bi : lbi) {
-            if (bi.getItem().equals(item_id)) {
+//            quantity = bi.getQuantity();
+            if (bi.getItem().equals(item_id) && (bi.getQuantity() > 1)) {
                 templates.sellItemOld(gnome_id, item_id, itemPice);
                 b.setItem_name(item_id);
                 b.setError_code("OK");
-//                b.setError_code("You have it already");
-//                b.setItem_name("Nothing baught");
+                System.out.println(quantity + " sellItemOld");
                 return b;
-            }else{
-                b.setError_code("You haven't this item");
+            } else if (bi.getItem().equals(item_id) && bi.getQuantity() == 1) {
+                templates.sellItemLast(gnome_id, item_id, itemPice);
+                b.setItem_name(item_id);
+                b.setError_code("OK");
+                System.out.println(bi.getQuantity() + " sellItemLast");
+                return b;
             }
         }
-
-
+        b.setError_code("You haven't this item");
+        System.out.println(quantity + " no item");
         return b;
+
     }
 
 }

@@ -89,7 +89,7 @@ public class Templates {
     }
 
     public List<BaughtItem> getBaughtItem(String gnome_id) {
-        String sql = "select item_id from sales where gnome_id=" + gnome_id;
+        String sql = "select item_id, quantity from sales where gnome_id=" + gnome_id;
         return jdbcTemplate.query(sql, new MapperBaughtItem());
     }
 
@@ -121,7 +121,7 @@ public class Templates {
 
         try {
             String sqlTakeMoney = "update gnomes set gnome_money=gnome_money+"
-                    + itemPrice + "whree gnome_id=" + gnome_id;
+                    + itemPrice + " where gnome_id=" + gnome_id;
             jdbcTemplate.update(sqlTakeMoney);
             String sqlDeleteSale = "delete from sales where item_id=" + item_id + " and gnome_id=" + gnome_id;
             jdbcTemplate.update(sqlDeleteSale);
