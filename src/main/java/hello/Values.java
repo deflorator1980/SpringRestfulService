@@ -1,4 +1,4 @@
-package db_spring;
+package hello;
 
 /**
  * Created by deflo_000 on 07-Sep-15.

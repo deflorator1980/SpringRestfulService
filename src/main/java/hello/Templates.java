@@ -1,6 +1,5 @@
-package db_spring;
+package hello;
 
-import hello.*;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -9,7 +8,6 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import javax.sql.DataSource;
-import java.io.IOException;
 import java.util.List;
 
 /**

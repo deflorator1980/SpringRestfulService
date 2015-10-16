@@ -1,4 +1,4 @@
-package db_spring;
+package hello;
 
 import java.util.HashMap;
 

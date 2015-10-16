@@ -1,4 +1,4 @@
-package db_spring;
+package hello;
 
 import org.springframework.jdbc.core.RowMapper;
 
