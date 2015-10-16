@@ -50,6 +50,8 @@ public class GreetingController {
     public  int idNext;
     public  String filepath = "items.xml";
 
+    List<Shop> itemsList = new ArrayList<>();
+
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(),
@@ -159,12 +161,42 @@ public class GreetingController {
 
     @RequestMapping("/view-shop")
     public List<Shop> viewShop() throws ParserConfigurationException, IOException, SAXException {
+//        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+//        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+//        doc = docBuilder.parse(filepath);
+//        weapons = doc.getElementsByTagName("weapons").item(0);
+//
+//        List<Shop> everyThing = new ArrayList<>();
+//
+//        Shop shop = null;
+//
+//        NodeList list = weapons.getChildNodes();
+//        int lenght = list.getLength();
+//        for (int i = 0; i < lenght; i++) {
+//            Node node = list.item(i);
+//            if ("weapon".equals(node.getNodeName())) {
+//                shop = new Shop();
+//                shop.setId(node.getAttributes().getNamedItem("id").getTextContent());
+//                shop.setName(((Element)node).getElementsByTagName("name").item(0).getTextContent());
+//                shop.setPrice(Integer.parseInt(((Element) node).getElementsByTagName("price").item(0).getTextContent()));
+//                everyThing.add(shop);
+//            }
+//        }
+//        if(itemsList != null){
+//            return itemsList;
+//        }
+//        return getItemsList();
+        if (itemsList.isEmpty()){
+            return getItemsList();
+        }
+        return itemsList;
+    }
+
+    public List<Shop> getItemsList() throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
         doc = docBuilder.parse(filepath);
         weapons = doc.getElementsByTagName("weapons").item(0);
-
-        List<Shop> everyThing = new ArrayList<>();
 
         Shop shop = null;
 
@@ -177,12 +209,11 @@ public class GreetingController {
                 shop.setId(node.getAttributes().getNamedItem("id").getTextContent());
                 shop.setName(((Element)node).getElementsByTagName("name").item(0).getTextContent());
                 shop.setPrice(Integer.parseInt(((Element) node).getElementsByTagName("price").item(0).getTextContent()));
-                everyThing.add(shop);
+                itemsList.add(shop);
             }
         }
-        return everyThing;
+        return itemsList;
     }
-
-
-
 }
+
+
