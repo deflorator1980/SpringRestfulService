@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commands_examples.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello/BaughtItem.class" afterPath="$PROJECT_DIR$/target/classes/hello/BaughtItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello/Buy.class" afterPath="$PROJECT_DIR$/target/classes/hello/Buy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello/Money.class" afterPath="$PROJECT_DIR$/target/classes/hello/Money.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello/Nil.class" afterPath="$PROJECT_DIR$/target/classes/hello/Nil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="" />
     <ignored path="SpringRestfulService.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -113,7 +106,7 @@
       <file leaf-file-name="WebSecurityConfig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.525">
+            <state vertical-scroll-proportion="0.1875">
               <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding />
             </state>
@@ -579,7 +572,7 @@
       <workItem from="1444874436626" duration="7211000" />
       <workItem from="1444934142820" duration="20452000" />
       <workItem from="1444994966928" duration="726000" />
-      <workItem from="1444995936845" duration="548000" />
+      <workItem from="1444995936845" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="buy prerfect">
       <created>1444607963947</created>
@@ -647,11 +640,17 @@
       <option name="project" value="LOCAL" />
       <updated>1444996396654</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ok+command examples&#10;">
+      <created>1444996507223</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1444996507223</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53858000" />
+    <option name="totallyTimeSpent" value="53941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -708,7 +707,8 @@
     <MESSAGE value="one package" />
     <MESSAGE value="database game" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="ok+command examples&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok+command examples&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1104,7 +1104,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.525">
+        <state vertical-scroll-proportion="0.1875">
           <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
           <folding />
         </state>
