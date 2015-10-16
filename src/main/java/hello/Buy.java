@@ -1,8 +1,5 @@
 package hello;
 
-/**
- * Created by a on 12.09.15.
- */
 public class Buy {
     String item_name;
     String error_code;

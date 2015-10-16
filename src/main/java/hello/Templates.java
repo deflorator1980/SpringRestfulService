@@ -10,9 +10,7 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 import javax.sql.DataSource;
 import java.util.List;
 
-/**
- * Created by deflo_000 on 07-Sep-15.
- */
+
 public class Templates {
     private DataSource dataSource;
     private JdbcTemplate jdbcTemplate;

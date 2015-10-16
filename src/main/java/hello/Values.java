@@ -1,8 +1,6 @@
 package hello;
 
-/**
- * Created by deflo_000 on 07-Sep-15.
- */
+
 public class Values {
     private String gnome_name;
     private String gnome_money;

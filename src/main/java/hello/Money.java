@@ -1,8 +1,6 @@
 package hello;
 
-/**
- * Created by a on 15.09.15.
- */
+
 public class Money {
     private int rubles;
 

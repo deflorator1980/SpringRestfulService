@@ -5,9 +5,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by deflo_000 on 09-Sep-15.
- */
+
 public class MappersGnome implements RowMapper<ValuesGnome>{
 
     @Override
