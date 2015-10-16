@@ -35,28 +35,20 @@ import java.util.*;
 public class GreetingController {
 
     private static final String template = "%s";
-    private static final int princeSword = 5;
-    private static int itemPice;
-    private static final int princeSpear = 3;
-    private static final int princeGrenade = 1;
-    private static String gnome_id;
-    private final AtomicLong counter = new AtomicLong();
+
+    private int itemPice;
+
+    private String gnome_id;
 
     ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
     Templates templates = (Templates) ac.getBean("Templates");
 
-    public  Node weapons;
-    public  Document doc;
-    public  int idNext;
-    public  String filepath = "items.xml";
+    private   Node weapons;
+    private   Document doc;
+    private   int idNext;
+    private   String filepath = "items.xml";
 
     List<Shop> itemsList = new ArrayList<>();
-
-    @RequestMapping("/greeting")
-    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return new Greeting(counter.incrementAndGet(),
-                String.format(template, name));
-    }
 
     @RequestMapping("/")
     public Nil nil(String hello) {
@@ -161,31 +153,7 @@ public class GreetingController {
 
     @RequestMapping("/view-shop")
     public List<Shop> viewShop() throws ParserConfigurationException, IOException, SAXException {
-//        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-//        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-//        doc = docBuilder.parse(filepath);
-//        weapons = doc.getElementsByTagName("weapons").item(0);
-//
-//        List<Shop> everyThing = new ArrayList<>();
-//
-//        Shop shop = null;
-//
-//        NodeList list = weapons.getChildNodes();
-//        int lenght = list.getLength();
-//        for (int i = 0; i < lenght; i++) {
-//            Node node = list.item(i);
-//            if ("weapon".equals(node.getNodeName())) {
-//                shop = new Shop();
-//                shop.setId(node.getAttributes().getNamedItem("id").getTextContent());
-//                shop.setName(((Element)node).getElementsByTagName("name").item(0).getTextContent());
-//                shop.setPrice(Integer.parseInt(((Element) node).getElementsByTagName("price").item(0).getTextContent()));
-//                everyThing.add(shop);
-//            }
-//        }
-//        if(itemsList != null){
-//            return itemsList;
-//        }
-//        return getItemsList();
+
         if (itemsList.isEmpty()){
             return getItemsList();
         }
@@ -198,7 +166,7 @@ public class GreetingController {
         doc = docBuilder.parse(filepath);
         weapons = doc.getElementsByTagName("weapons").item(0);
 
-        Shop shop = null;
+        Shop shop;
 
         NodeList list = weapons.getChildNodes();
         int lenght = list.getLength();
