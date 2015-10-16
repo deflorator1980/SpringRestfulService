@@ -23,11 +23,5 @@ public class ValuesItem {
         this.quantity = quantity;
     }
 
-    @Override
-    public String toString() {
-        return "ValuesItem{" +
-                "item_name='" + item_name + '\'' +
-                ", quantity=" + quantity +
-                '}';
-    }
+
 }

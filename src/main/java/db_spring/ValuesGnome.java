@@ -23,11 +23,4 @@ public class ValuesGnome {
         this.gnome_money = gnome_money;
     }
 
-    @Override
-    public String toString() {
-        return "ValuesGnome{" +
-                "gnome_name='" + gnome_name + '\'' +
-                ", gnome_money=" + gnome_money +
-                '}';
-    }
 }

@@ -32,12 +32,5 @@ public class ValuesMap {
         this.items = items;
     }
 
-    @Override
-    public String toString() {
-        return "ValuesMap{" +
-                "gnome_name='" + gnome_name + '\'' +
-                ", gnome_money=" + gnome_money +
-                ", items=" + items +
-                '}';
-    }
+
 }

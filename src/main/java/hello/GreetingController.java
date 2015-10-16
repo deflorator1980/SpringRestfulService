@@ -34,8 +34,6 @@ import java.util.*;
 @RestController
 public class GreetingController {
 
-    private static final String template = "%s";
-
     private int itemPice;
 
     private String gnome_id;
