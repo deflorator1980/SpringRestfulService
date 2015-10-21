@@ -85,7 +85,7 @@ public class Templates {
     }
 
     public List<BaughtItem> getBaughtItem(String gnome_id) {
-        String sql = "select item_id, quantity from sales where gnome_id=" + gnome_id;
+        String sql = "select item_id, quantity from sales where gnome_id='" + gnome_id +"'";
         return jdbcTemplate.query(sql, new MapperBaughtItem());
     }
 
@@ -94,8 +94,8 @@ public class Templates {
         TransactionStatus status = transactionManager.getTransaction(def);
 
         try {
-            String sqlIncQuantity = "update sales set quantity=quantity+1 where gnome_id="
-                    + gnome_id + " and item_id=" + item_id;
+            String sqlIncQuantity = "update sales set quantity=quantity+1 where gnome_id='"
+                    + gnome_id + "' and item_id='" + item_id + "'";
             jdbcTemplate.update(sqlIncQuantity);
 
             String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-" + itemPrice
