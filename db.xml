@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
        <bean id="dataSource"  class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-              <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-              <property name="url" value="jdbc:mysql://localhost:3306/game"/>
-              <property name="username" value="root"/>
+              <property name="driverClassName" value="org.postgresql.Driver"/>
+              <property name="url" value="jdbc:postgresql://localhost:5432/game"/>
+              <property name="username" value="postgres"/>
               <property name="password" value="root"/>
        </bean>
 

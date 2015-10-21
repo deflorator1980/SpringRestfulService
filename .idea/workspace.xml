@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="" />
+    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_9_4_1201_jdbc41.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringRestfulService.iml" afterPath="$PROJECT_DIR$/SpringRestfulService.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/Templates.java" afterPath="$PROJECT_DIR$/src/main/java/hello/Templates.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.xml" afterPath="$PROJECT_DIR$/db.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.sql" afterPath="$PROJECT_DIR$/game.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="SpringRestfulService.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,33 +31,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Money.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/Money.java">
+      <file leaf-file-name="db.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.6206896">
+              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Nil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/Nil.java">
+      <file leaf-file-name="game.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.8709676">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="33" selection-end-column="79" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shop.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/Shop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-              <folding />
-            </state>
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -57,57 +58,34 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/Templates.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+              <folding>
+                <marker date="1445445046790" expanded="true" signature="964:1161" placeholder="select gnome..gnomes..." />
+                <marker date="1445445046790" expanded="true" signature="1296:1538" placeholder="select gnome..gnomes..." />
+                <marker date="1445445046790" expanded="true" signature="1713:1954" placeholder="select gnome..gnomes..." />
+                <marker date="1445445046790" expanded="true" signature="2110:2171" placeholder="select gnome..gnomes..." />
+                <marker date="1445445046790" expanded="true" signature="2358:2540" placeholder="select items..gnomes..." />
+                <marker date="1445445046790" expanded="true" signature="2358:2557" placeholder="select items..gnomes..." />
+                <marker date="1445445046790" expanded="true" signature="2901:2996" placeholder="UPDATE gnome..." />
+                <marker date="1445445046790" expanded="true" signature="3091:3155" placeholder="insert into ..." />
+                <marker date="1445445046790" expanded="true" signature="3547:3596" placeholder="SELECT gnome..gnomes..." />
+                <marker date="1445445046790" expanded="true" signature="3789:3840" placeholder="select item_..sales..." />
+                <marker date="1445445046790" expanded="true" signature="4201:4302" placeholder="update sales..." />
+                <marker date="1445445046790" expanded="true" signature="4400:4495" placeholder="UPDATE gnome..." />
+                <marker date="1445445046790" expanded="true" signature="5088:5183" placeholder="update gnome..." />
+                <marker date="1445445046790" expanded="true" signature="5280:5341" placeholder="delete from ..." />
+                <marker date="1445445046790" expanded="true" signature="5934:6035" placeholder="update sales..." />
+                <marker date="1445445046790" expanded="true" signature="6133:6228" placeholder="update gnome..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Values.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/Values.java">
+      <file leaf-file-name="GreetingController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValuesGnome.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/ValuesGnome.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValuesItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/ValuesItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValuesMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/ValuesMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSecurityConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/WebSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1875">
-              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.4566474">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,18 +129,19 @@
         <option value="$PROJECT_DIR$/src/main/java/db_spring/ValuesGnome.java" />
         <option value="$PROJECT_DIR$/src/main/java/db_spring/ValuesItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Mappers.java" />
-        <option value="$PROJECT_DIR$/game.sql" />
-        <option value="$PROJECT_DIR$/db.xml" />
         <option value="$PROJECT_DIR$/src/main/java/hello/BaughtItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Buy.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/MappersGnome.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/MappersItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Money.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Nil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/Templates.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Values.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/ValuesGnome.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/ValuesItem.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/game.sql" />
+        <option value="$PROJECT_DIR$/db.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/Templates.java" />
       </list>
     </option>
   </component>
@@ -175,6 +154,11 @@
       <MavenGeneralSettings>
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="NamedScopeManager">
@@ -209,6 +193,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -256,7 +241,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -572,7 +556,8 @@
       <workItem from="1444874436626" duration="7211000" />
       <workItem from="1444934142820" duration="20452000" />
       <workItem from="1444994966928" duration="726000" />
-      <workItem from="1444995936845" duration="631000" />
+      <workItem from="1444995936845" duration="1228000" />
+      <workItem from="1445436520357" duration="6233000" />
     </task>
     <task id="LOCAL-00001" summary="buy prerfect">
       <created>1444607963947</created>
@@ -650,7 +635,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53941000" />
+    <option name="totallyTimeSpent" value="60771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -664,14 +649,14 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35916543" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18181819" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2021522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20061491" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20292082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20292082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -795,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,15 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="49" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,30 +913,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="79" selection-start-line="22" selection-start-column="79" selection-end-line="22" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6551723">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,7 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,21 +935,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/MapperBaughtItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,7 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1029,7 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +974,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#101#102#0" expanded="false" />
+            <element signature="e#137#138#0" expanded="false" />
+            <element signature="e#167#168#0" expanded="false" />
+            <element signature="e#196#197#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,7 +987,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#84#85#0" expanded="false" />
+            <element signature="e#118#119#0" expanded="false" />
+            <element signature="e#150#151#0" expanded="false" />
+            <element signature="e#178#179#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,15 +1000,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/Templates.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#134#135#0" expanded="false" />
+            <element signature="e#159#160#0" expanded="false" />
+            <element signature="e#195#196#0" expanded="false" />
+            <element signature="e#223#224#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+            <element signature="e#281#282#0" expanded="false" />
+            <element signature="e#321#322#0" expanded="false" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#449#450#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,7 +1021,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#192#193#0" expanded="false" />
+            <element signature="e#225#226#0" expanded="false" />
+            <element signature="e#277#278#0" expanded="false" />
+            <element signature="e#321#322#0" expanded="false" />
+            <element signature="e#359#360#0" expanded="false" />
+            <element signature="e#393#394#0" expanded="false" />
+            <element signature="e#447#448#0" expanded="false" />
+            <element signature="e#493#494#0" expanded="false" />
+            <element signature="e#529#530#0" expanded="false" />
+            <element signature="e#561#562#0" expanded="false" />
+            <element signature="e#611#612#0" expanded="false" />
+            <element signature="e#653#654#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#714#715#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#795#796#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1077,7 +1046,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#139#140#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="false" />
+            <element signature="e#224#225#0" expanded="false" />
+            <element signature="e#268#269#0" expanded="false" />
+            <element signature="e#303#304#0" expanded="false" />
+            <element signature="e#337#338#0" expanded="false" />
+            <element signature="e#388#389#0" expanded="false" />
+            <element signature="e#434#435#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,7 +1063,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#133#134#0" expanded="false" />
+            <element signature="e#165#166#0" expanded="false" />
+            <element signature="e#215#216#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
+            <element signature="e#289#290#0" expanded="false" />
+            <element signature="e#320#321#0" expanded="false" />
+            <element signature="e#365#366#0" expanded="false" />
+            <element signature="e#405#406#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,7 +1080,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#208#209#0" expanded="false" />
+            <element signature="e#241#242#0" expanded="false" />
+            <element signature="e#293#294#0" expanded="false" />
+            <element signature="e#337#338#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#406#407#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#503#504#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+            <element signature="e#581#582#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,8 +1104,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1875">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8709676">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="33" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6206896">
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/Templates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <marker date="1445445046790" expanded="true" signature="964:1161" placeholder="select gnome..gnomes..." />
+            <marker date="1445445046790" expanded="true" signature="1296:1538" placeholder="select gnome..gnomes..." />
+            <marker date="1445445046790" expanded="true" signature="1713:1954" placeholder="select gnome..gnomes..." />
+            <marker date="1445445046790" expanded="true" signature="2110:2171" placeholder="select gnome..gnomes..." />
+            <marker date="1445445046790" expanded="true" signature="2358:2540" placeholder="select items..gnomes..." />
+            <marker date="1445445046790" expanded="true" signature="2358:2557" placeholder="select items..gnomes..." />
+            <marker date="1445445046790" expanded="true" signature="2901:2996" placeholder="UPDATE gnome..." />
+            <marker date="1445445046790" expanded="true" signature="3091:3155" placeholder="insert into ..." />
+            <marker date="1445445046790" expanded="true" signature="3547:3596" placeholder="SELECT gnome..gnomes..." />
+            <marker date="1445445046790" expanded="true" signature="3789:3840" placeholder="select item_..sales..." />
+            <marker date="1445445046790" expanded="true" signature="4201:4302" placeholder="update sales..." />
+            <marker date="1445445046790" expanded="true" signature="4400:4495" placeholder="UPDATE gnome..." />
+            <marker date="1445445046790" expanded="true" signature="5088:5183" placeholder="update gnome..." />
+            <marker date="1445445046790" expanded="true" signature="5280:5341" placeholder="delete from ..." />
+            <marker date="1445445046790" expanded="true" signature="5934:6035" placeholder="update sales..." />
+            <marker date="1445445046790" expanded="true" signature="6133:6228" placeholder="update gnome..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4566474">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
