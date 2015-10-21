@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/Templates.java" afterPath="$PROJECT_DIR$/src/main/java/hello/Templates.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.sql" afterPath="$PROJECT_DIR$/game.sql" />
     </list>
     <ignored path="SpringRestfulService.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,24 +27,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Templates.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Templates.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/Templates.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.615">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding>
-                <marker date="1445448155819" expanded="true" signature="983:1044" placeholder="select gnome..gnomes..." />
-                <marker date="1445448155819" expanded="true" signature="1231:1412" placeholder="select items..gnomes..." />
-                <marker date="1445448155819" expanded="true" signature="1767:1862" placeholder="UPDATE gnome..." />
-                <marker date="1445448155819" expanded="true" signature="1957:2021" placeholder="insert into ..." />
-                <marker date="1445448155819" expanded="true" signature="2413:2462" placeholder="SELECT gnome..gnomes..." />
-                <marker date="1445448155819" expanded="true" signature="2655:2706" placeholder="select item_..sales..." />
-                <marker date="1445448155819" expanded="true" signature="3067:3168" placeholder="update sales..." />
-                <marker date="1445448155819" expanded="true" signature="3266:3361" placeholder="UPDATE gnome..." />
-                <marker date="1445448155819" expanded="true" signature="3954:4049" placeholder="update gnome..." />
-                <marker date="1445448155819" expanded="true" signature="4146:4207" placeholder="delete from ..." />
-                <marker date="1445448155819" expanded="true" signature="4800:4901" placeholder="update sales..." />
-                <marker date="1445448155819" expanded="true" signature="4999:5094" placeholder="update gnome..." />
+                <marker date="1445451447660" expanded="true" signature="983:1044" placeholder="select gnome..gnomes..." />
+                <marker date="1445451447660" expanded="true" signature="1231:1412" placeholder="select items..gnomes..." />
+                <marker date="1445451447660" expanded="true" signature="1231:1413" placeholder="select items..gnomes..." />
+                <marker date="1445451447660" expanded="true" signature="1768:1827" placeholder="UPDATE gnome..." />
+                <marker date="1445451447660" expanded="true" signature="1768:1828" placeholder="UPDATE gnome..." />
+                <marker date="1445451447660" expanded="true" signature="1933:1997" placeholder="insert into ..." />
+                <marker date="1445451447660" expanded="true" signature="2389:2438" placeholder="SELECT gnome..gnomes..." />
+                <marker date="1445451447660" expanded="true" signature="2631:2683" placeholder="select item_..sales..." />
+                <marker date="1445451447660" expanded="true" signature="3043:3135" placeholder="update sales..." />
+                <marker date="1445451447660" expanded="true" signature="3043:3136" placeholder="update sales..." />
+                <marker date="1445451447660" expanded="true" signature="3043:3138" placeholder="update sales..." />
+                <marker date="1445451447660" expanded="true" signature="3243:3327" placeholder="UPDATE gnome..." />
+                <marker date="1445451447660" expanded="true" signature="3243:3328" placeholder="UPDATE gnome..." />
+                <marker date="1445451447660" expanded="true" signature="3931:4016" placeholder="update gnome..." />
+                <marker date="1445451447660" expanded="true" signature="3931:4017" placeholder="update gnome..." />
+                <marker date="1445451447660" expanded="true" signature="4126:4173" placeholder="delete from ..." />
+                <marker date="1445451447660" expanded="true" signature="4126:4174" placeholder="delete from ..." />
+                <marker date="1445451447660" expanded="true" signature="4777:4868" placeholder="update sales..." />
+                <marker date="1445451447660" expanded="true" signature="4777:4869" placeholder="update sales..." />
+                <marker date="1445451447660" expanded="true" signature="4976:5060" placeholder="update gnome..." />
+                <marker date="1445451447660" expanded="true" signature="4976:5061" placeholder="update gnome..." />
               </folding>
             </state>
           </provider>
@@ -51,8 +62,8 @@
       <file leaf-file-name="game.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.645162">
-              <caret line="35" column="79" selection-start-line="35" selection-start-column="79" selection-end-line="35" selection-end-column="79" />
+            <state vertical-scroll-proportion="-0.9677419">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GreetingController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GreetingController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9186992">
-              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,7 +114,6 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/MvcConfig.java" />
         <option value="$PROJECT_DIR$/items.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Greeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/MapperMoney.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Shop.java" />
@@ -121,6 +131,7 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/Values.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/ValuesGnome.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/ValuesItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
         <option value="$PROJECT_DIR$/game.sql" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Templates.java" />
       </list>
@@ -169,7 +180,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,6 +228,7 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -534,6 +545,7 @@
       <workItem from="1444994966928" duration="726000" />
       <workItem from="1444995936845" duration="631000" />
       <workItem from="1445446407295" duration="1019000" />
+      <workItem from="1445449437914" duration="2255000" />
     </task>
     <task id="LOCAL-00001" summary="buy prerfect">
       <created>1444607963947</created>
@@ -611,7 +623,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54960000" />
+    <option name="totallyTimeSpent" value="57215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -629,10 +641,10 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2021522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2021522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20292082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20292082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -950,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,10 +1048,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.645162">
-          <caret line="35" column="79" selection-start-line="35" selection-start-column="79" selection-end-line="35" selection-end-column="79" />
+        <state vertical-scroll-proportion="-0.9677419">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1050,31 +1071,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/Templates.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.615">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding>
-            <marker date="1445448155819" expanded="true" signature="983:1044" placeholder="select gnome..gnomes..." />
-            <marker date="1445448155819" expanded="true" signature="1231:1412" placeholder="select items..gnomes..." />
-            <marker date="1445448155819" expanded="true" signature="1767:1862" placeholder="UPDATE gnome..." />
-            <marker date="1445448155819" expanded="true" signature="1957:2021" placeholder="insert into ..." />
-            <marker date="1445448155819" expanded="true" signature="2413:2462" placeholder="SELECT gnome..gnomes..." />
-            <marker date="1445448155819" expanded="true" signature="2655:2706" placeholder="select item_..sales..." />
-            <marker date="1445448155819" expanded="true" signature="3067:3168" placeholder="update sales..." />
-            <marker date="1445448155819" expanded="true" signature="3266:3361" placeholder="UPDATE gnome..." />
-            <marker date="1445448155819" expanded="true" signature="3954:4049" placeholder="update gnome..." />
-            <marker date="1445448155819" expanded="true" signature="4146:4207" placeholder="delete from ..." />
-            <marker date="1445448155819" expanded="true" signature="4800:4901" placeholder="update sales..." />
-            <marker date="1445448155819" expanded="true" signature="4999:5094" placeholder="update gnome..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9186992">
-          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1445451447660" expanded="true" signature="983:1044" placeholder="select gnome..gnomes..." />
+            <marker date="1445451447660" expanded="true" signature="1231:1412" placeholder="select items..gnomes..." />
+            <marker date="1445451447660" expanded="true" signature="1231:1413" placeholder="select items..gnomes..." />
+            <marker date="1445451447660" expanded="true" signature="1768:1827" placeholder="UPDATE gnome..." />
+            <marker date="1445451447660" expanded="true" signature="1768:1828" placeholder="UPDATE gnome..." />
+            <marker date="1445451447660" expanded="true" signature="1933:1997" placeholder="insert into ..." />
+            <marker date="1445451447660" expanded="true" signature="2389:2438" placeholder="SELECT gnome..gnomes..." />
+            <marker date="1445451447660" expanded="true" signature="2631:2683" placeholder="select item_..sales..." />
+            <marker date="1445451447660" expanded="true" signature="3043:3135" placeholder="update sales..." />
+            <marker date="1445451447660" expanded="true" signature="3043:3136" placeholder="update sales..." />
+            <marker date="1445451447660" expanded="true" signature="3043:3138" placeholder="update sales..." />
+            <marker date="1445451447660" expanded="true" signature="3243:3327" placeholder="UPDATE gnome..." />
+            <marker date="1445451447660" expanded="true" signature="3243:3328" placeholder="UPDATE gnome..." />
+            <marker date="1445451447660" expanded="true" signature="3931:4016" placeholder="update gnome..." />
+            <marker date="1445451447660" expanded="true" signature="3931:4017" placeholder="update gnome..." />
+            <marker date="1445451447660" expanded="true" signature="4126:4173" placeholder="delete from ..." />
+            <marker date="1445451447660" expanded="true" signature="4126:4174" placeholder="delete from ..." />
+            <marker date="1445451447660" expanded="true" signature="4777:4868" placeholder="update sales..." />
+            <marker date="1445451447660" expanded="true" signature="4777:4869" placeholder="update sales..." />
+            <marker date="1445451447660" expanded="true" signature="4976:5060" placeholder="update gnome..." />
+            <marker date="1445451447660" expanded="true" signature="4976:5061" placeholder="update gnome..." />
           </folding>
         </state>
       </provider>

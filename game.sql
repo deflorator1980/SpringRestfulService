@@ -1,5 +1,5 @@
 CREATE DATABASE game;
-USE database game;
+USE  game;
 
 CREATE TABLE sales (
   sale_id  INT         NOT NULL AUTO_INCREMENT,

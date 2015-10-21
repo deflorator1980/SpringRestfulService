@@ -46,7 +46,7 @@ public class GreetingController {
     }
 
     @RequestMapping("/my-info")
-    public ValuesMap showG() {
+    public ValuesMap myInfo() {
 
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         gnome_id = userDetails.getUsername();
