@@ -25,7 +25,6 @@ public class Templates {
         this.transactionManager = transactionManager;
     }
 
-
     public ValuesGnome showValuesGnome(String gnome_id) {
         String sql = "select gnome_name, gnome_money from gnomes where gnome_id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MappersGnome());
@@ -33,8 +32,8 @@ public class Templates {
 
     public List<ValuesItem> showValuesItem(String gnome_id) {
         String sql = "select items.item_name, sales.quantity from gnomes, items, sales where" +
-                " gnomes.gnome_id = sales.gnome_id  and sales.item_id = items.item_id and gnomes.gnome_id ='" + gnome_id + "'";
-        return jdbcTemplate.query(sql, new MappersItem());
+                " gnomes.gnome_id = sales.gnome_id  and sales.item_id = items.item_id and gnomes.gnome_id =?";
+        return jdbcTemplate.query(sql, new MappersItem(), gnome_id);
     }
 
 
@@ -43,9 +42,9 @@ public class Templates {
         TransactionStatus status = transactionManager.getTransaction(def);
 
         try {
-            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-" + itemPrice
-                    + " WHERE gnome_id=" + gnome_id;
-            jdbcTemplate.update(sqlGiveMoney);
+
+            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-? WHERE gnome_id=?";
+            jdbcTemplate.update(sqlGiveMoney, itemPrice, gnome_id);
 
             String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 1);";
             jdbcTemplate.update(sqlGetItem, gnome_id, item_id);
@@ -66,8 +65,8 @@ public class Templates {
     }
 
     public List<BaughtItem> getBaughtItem(String gnome_id) {
-        String sql = "select item_id, quantity from sales where gnome_id='" + gnome_id +"'";
-        return jdbcTemplate.query(sql, new MapperBaughtItem());
+        String sql = "select item_id, quantity from sales where gnome_id=?";
+        return jdbcTemplate.query(sql, new MapperBaughtItem(), gnome_id);
     }
 
     public void buyItemOld(String gnome_id, String item_id, int itemPrice) {
@@ -75,13 +74,13 @@ public class Templates {
         TransactionStatus status = transactionManager.getTransaction(def);
 
         try {
-            String sqlIncQuantity = "update sales set quantity=quantity+1 where gnome_id='"
-                    + gnome_id + "' and item_id='" + item_id + "'";
-            jdbcTemplate.update(sqlIncQuantity);
+            String sqlIncQuantity = "update sales set quantity=quantity+1 where gnome_id=?"
+                    + " and item_id=?";
+            jdbcTemplate.update(sqlIncQuantity, gnome_id, item_id);
 
-            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-" + itemPrice
-                    + " WHERE gnome_id=" + gnome_id;
-            jdbcTemplate.update(sqlGiveMoney);
+            String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-?"
+                    + " WHERE gnome_id=?";
+            jdbcTemplate.update(sqlGiveMoney, itemPrice, gnome_id);
 
             transactionManager.commit(status);
 
@@ -97,11 +96,13 @@ public class Templates {
         TransactionStatus status = transactionManager.getTransaction(def);
 
         try {
-            String sqlTakeMoney = "update gnomes set gnome_money=gnome_money+"
-                    + itemPrice + " where gnome_id=" + gnome_id;
-            jdbcTemplate.update(sqlTakeMoney);
-            String sqlDeleteSale = "delete from sales where item_id=" + item_id + " and gnome_id=" + gnome_id;
-            jdbcTemplate.update(sqlDeleteSale);
+            String sqlTakeMoney = "update gnomes set gnome_money=gnome_money+?"
+                    + " where gnome_id=?";
+            jdbcTemplate.update(sqlTakeMoney, itemPrice, gnome_id);
+
+            String sqlDeleteSales = "delete from sales where item_id=? and gnome_id=?";
+            jdbcTemplate.update(sqlDeleteSales, item_id, gnome_id);
+
             transactionManager.commit(status);
 
 
@@ -117,13 +118,13 @@ public class Templates {
         TransactionStatus status = transactionManager.getTransaction(def);
 
         try {
-            String sqlDecQuantity = "update sales set quantity=quantity-1 where gnome_id="
-                    + gnome_id + " and item_id=" + item_id;
-            jdbcTemplate.update(sqlDecQuantity);
+            String sqlDecQuantity = "update sales set quantity=quantity-1 where gnome_id=?"
+                    + " and item_id=?";
+            jdbcTemplate.update(sqlDecQuantity, gnome_id, item_id);
 
-            String sqlTakeMoney = "update gnomes set gnome_money=gnome_money+" + itemPrice
-                    + " where gnome_id=" + gnome_id;
-            jdbcTemplate.update(sqlTakeMoney);
+            String sqlTakeMoney = "update gnomes set gnome_money=gnome_money+?"
+                    + " where gnome_id=?";
+            jdbcTemplate.update(sqlTakeMoney, itemPrice, gnome_id);
 
             transactionManager.commit(status);
 
