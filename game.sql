@@ -32,5 +32,5 @@ INSERT INTO gnomes (gnome_id, gnome_name, gnome_money) VALUES ('002', 'dasha', '
 INSERT INTO gnomes (gnome_id, gnome_name, gnome_money) VALUES ('003', 'yasha', '100');
 
 INSERT INTO items (item_id, item_name, item_price) VALUES ('01', 'sword', 10);
-INSERT INTO items (item_id, item_name, item_price) VALUES ('02', 'spear', 6);
+INSERT INTO items (item_id, item_name, item_price) VALUES ('02', 'spear', 4);
 INSERT INTO items (item_id, item_name, item_price) VALUES ('03', 'grenade', 2);
