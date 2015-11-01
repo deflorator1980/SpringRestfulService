@@ -1,6 +1,5 @@
 package hello_big;
 
-import hello.*;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -9,6 +8,7 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import javax.sql.DataSource;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -30,17 +30,17 @@ public class TemplatesBig {
 
     public ValuesGnomeBig showValuesGnome(String gnome_id) {
         String sql = "select gnome_name, gnome_money from gnomes where gnome_id = ?";
-        return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MappersGnome());
+        return jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MappersGnomeBig());
     }
 
-    public List<ValuesItem> showValuesItem(String gnome_id) {
+    public List<ValuesItemBig> showValuesItem(String gnome_id) {
         String sql = "select items.item_name, sales.quantity from gnomes, items, sales where" +
                 " gnomes.gnome_id = sales.gnome_id  and sales.item_id = items.item_id and gnomes.gnome_id =?";
-        return jdbcTemplate.query(sql, new MappersItem(), gnome_id);
+        return jdbcTemplate.query(sql, new MappersItemBig(), gnome_id);
     }
 
 
-    public void buyItemNew(String gnome_id, String item_id, int itemPrice) {
+    public void buyItemNew(String gnome_id, String item_id, BigDecimal itemPrice) {
         TransactionDefinition def = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(def);
 
@@ -62,17 +62,17 @@ public class TemplatesBig {
 
     }
 
-    public Money getMoney(String gnome_id) {
+    public MoneyBig getMoney(String gnome_id) {
         String sql = "SELECT gnome_money FROM gnomes WHERE gnome_id = ?";
-        return (Money) jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MapperMoney());
+        return (MoneyBig) jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MapperMoneyBig());
     }
 
-    public List<BaughtItem> getBaughtItem(String gnome_id) {
+    public List<BaughtItemBig> getBaughtItem(String gnome_id) {
         String sql = "select item_id, quantity from sales where gnome_id=?";
-        return jdbcTemplate.query(sql, new MapperBaughtItem(), gnome_id);
+        return jdbcTemplate.query(sql, new MapperBaughtItemBig(), gnome_id);
     }
 
-    public void buyItemOld(String gnome_id, String item_id, int itemPrice) {
+    public void buyItemOld(String gnome_id, String item_id, BigDecimal itemPrice) {
         TransactionDefinition def = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(def);
 
@@ -94,7 +94,7 @@ public class TemplatesBig {
         }
     }
 
-    public void sellItemLast(String gnome_id, String item_id, int itemPrice) {
+    public void sellItemLast(String gnome_id, String item_id, BigDecimal itemPrice) {
         TransactionDefinition def = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(def);
 
@@ -116,7 +116,7 @@ public class TemplatesBig {
         }
     }
 
-    public void sellItemOld(String gnome_id, String item_id, int itemPrice) {
+    public void sellItemOld(String gnome_id, String item_id, BigDecimal itemPrice) {
         TransactionDefinition def = new DefaultTransactionDefinition();
         TransactionStatus status = transactionManager.getTransaction(def);
 
