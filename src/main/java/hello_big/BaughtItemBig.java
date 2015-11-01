@@ -1,10 +1,9 @@
-package hello;
+package hello_big;
 
-import java.sql.Array;
-import java.util.List;
-
-
-public class BaughtItem {
+/**
+ * Created by a on 01.11.15.
+ */
+public class BaughtItemBig {
     private String item;
     private int quantity;
 

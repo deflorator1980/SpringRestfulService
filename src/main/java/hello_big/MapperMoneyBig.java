@@ -1,17 +1,14 @@
-package hello;
+package hello_big;
 
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
-public class MapperMoney implements RowMapper {
-    @Override
+public class MapperMoneyBig implements RowMapper{
     public Object mapRow(ResultSet resultSet, int i) throws SQLException {
-        Money money = new Money();
-        money.setRubles(resultSet.getInt("gnome_money"));
+        MoneyBig money = new MoneyBig();
+        money.setRubles(resultSet.getBigDecimal("gnome_money"));
         return money;
-
     }
 }

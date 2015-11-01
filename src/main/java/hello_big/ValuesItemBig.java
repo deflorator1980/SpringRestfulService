@@ -1,7 +1,9 @@
-package hello;
+package hello_big;
 
-
-public class ValuesItem {
+/**
+ * Created by a on 01.11.15.
+ */
+public class ValuesItemBig {
     private String item_name;
     private int quantity;
 

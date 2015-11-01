@@ -1,9 +1,14 @@
-package hello;
+package hello_big;
 
-public class Shop {
+import java.math.BigDecimal;
+
+/**
+ * Created by a on 01.11.15.
+ */
+public class ShopBig {
     private String id;
     private String name;
-    private int price;
+    private BigDecimal price;
 
     public String getId() {
         return id;
@@ -21,12 +26,11 @@ public class Shop {
         this.name = name;
     }
 
-    public int getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
-
 }

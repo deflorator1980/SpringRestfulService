@@ -1,10 +1,12 @@
-package hello;
+package hello_big;
 
-
-public class Nil {
+/**
+ * Created by a on 01.11.15.
+ */
+public class NilBig {
     String hello;
 
-    public Nil(String hello) {
+    public NilBig(String hello) {
         this.hello = hello;
     }
 

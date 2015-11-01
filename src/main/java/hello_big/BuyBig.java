@@ -1,6 +1,7 @@
-package hello;
+package hello_big;
 
-public class Buy {
+
+public class BuyBig {
     String item_name;
     String error_code;
 

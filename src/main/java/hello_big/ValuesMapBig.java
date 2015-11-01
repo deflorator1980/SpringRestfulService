@@ -1,11 +1,12 @@
-package hello;
+package hello_big;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 
 
-public class ValuesMap {
+public class ValuesMapBig {
     private String gnome_name;
-    private int gnome_money;
+    private BigDecimal gnome_money;
     private HashMap<String, Integer> items;
 
     public String getGnome_name() {
@@ -16,11 +17,11 @@ public class ValuesMap {
         this.gnome_name = gnome_name;
     }
 
-    public int getGnome_money() {
+    public BigDecimal getGnome_money() {
         return gnome_money;
     }
 
-    public void setGnome_money(int gnome_money) {
+    public void setGnome_money(BigDecimal gnome_money) {
         this.gnome_money = gnome_money;
     }
 
@@ -31,6 +32,4 @@ public class ValuesMap {
     public void setItems(HashMap<String, Integer> items) {
         this.items = items;
     }
-
-
 }

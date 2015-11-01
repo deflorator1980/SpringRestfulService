@@ -1,9 +1,13 @@
-package hello;
+package hello_big;
 
+import java.math.BigDecimal;
 
-public class ValuesGnome {
+/**
+ * Created by a on 01.11.15.
+ */
+public class ValuesGnomeBig {
     private String gnome_name;
-    private int gnome_money;
+    private BigDecimal gnome_money;
 
     public String getGnome_name() {
         return gnome_name;
@@ -13,12 +17,11 @@ public class ValuesGnome {
         this.gnome_name = gnome_name;
     }
 
-    public int getGnome_money() {
+    public BigDecimal getGnome_money() {
         return gnome_money;
     }
 
-    public void setGnome_money(int gnome_money) {
+    public void setGnome_money(BigDecimal gnome_money) {
         this.gnome_money = gnome_money;
     }
-
 }
