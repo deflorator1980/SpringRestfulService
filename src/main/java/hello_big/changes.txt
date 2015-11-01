@@ -1,6 +1,0 @@
-Templates           ---
-GreetingController  ---
-MapperMoney         ---
-ValuesGnome         ---
-ValuesMap           ---
-MappersGnome        ---
