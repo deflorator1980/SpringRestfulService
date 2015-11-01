@@ -1,8 +1,4 @@
-package hello;
-
-import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.List;
+package hello_big;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -11,7 +7,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -22,20 +17,26 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.*;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
+/**
+ * Created by a on 01.11.15.
+ */
 @RestController
-public class GreetingController {
-
-    private int itemPice;
+public class GreetingControllerBig {
+//    private int itemPice;
+    private BigDecimal itemPice;
 
     private String gnome_id;
 
     ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-    Templates templates = (Templates) ac.getBean("Templates");
+    TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
 
-    private   Node weapons;
-    private   Document doc;
+    private Node weapons;
+    private Document doc;
     private   int idNext;
     private   String filepath = "items.xml";
 
@@ -52,11 +53,11 @@ public class GreetingController {
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         gnome_id = userDetails.getUsername();
 
-        ValuesGnome vg = templates.showValuesGnome(gnome_id);
+        ValuesGnomeBig vg = templates.showValuesGnome(gnome_id);
 
         List<ValuesItem> lvi = templates.showValuesItem(gnome_id);
 
-        ValuesMap vm = new ValuesMap();
+        ValuesMapBig vm = new ValuesMapBig();
 
         vm.setGnome_name(vg.getGnome_name());
         vm.setGnome_money(vg.getGnome_money());
@@ -101,9 +102,9 @@ public class GreetingController {
                 return b;
             }
         }
-            templates.buyItemNew(gnome_id, item_id, itemPice);
-            b.setItem_name(item_id);
-            b.setError_code("OK");
+        templates.buyItemNew(gnome_id, item_id, itemPice);
+        b.setItem_name(item_id);
+        b.setError_code("OK");
         return b;
     }
 
@@ -174,5 +175,3 @@ public class GreetingController {
         return itemsList;
     }
 }
-
-

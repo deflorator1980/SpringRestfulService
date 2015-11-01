@@ -5,7 +5,7 @@
 
        <bean id="dataSource"  class="org.springframework.jdbc.datasource.DriverManagerDataSource">
               <property name="driverClassName" value="org.postgresql.Driver"/>
-              <property name="url" value="jdbc:postgresql://localhost:5432/game"/>
+              <property name="url" value="jdbc:postgresql://localhost:5432/game_bigdecimal_postgres"/>
               <property name="username" value="postgres"/>
               <property name="password" value="root"/>
        </bean>
@@ -19,5 +19,12 @@
               <property name="dataSource" ref="dataSource"/>
               <property name="transactionManager" ref="transactionManager" />
        </bean>
+
+       <bean id="TemplatesBig" class="hello_big.TemplatesBig">
+              <property name="dataSource" ref="dataSource"/>
+              <property name="transactionManager" ref="transactionManager" />
+       </bean>
+
+
 
 </beans>
