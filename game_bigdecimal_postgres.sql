@@ -11,14 +11,14 @@ CREATE TABLE sales (
 CREATE TABLE gnomes (
   gnome_id    VARCHAR(45) NOT NULL,
   gnome_name  VARCHAR(45) NOT NULL,
-  gnome_money NUMERIC,
+  gnome_money NUMERIC(20, 2),
   CONSTRAINT gnomes_pkey PRIMARY KEY (gnome_id)
 );
 
 CREATE TABLE items (
   item_id    VARCHAR(45) NOT NULL,
   item_name  VARCHAR(45) NOT NULL,
-  item_price NUMERIC,
+  item_price NUMERIC (20, 2),
   PRIMARY KEY (item_id)
 );
 
