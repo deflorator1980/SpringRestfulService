@@ -35,10 +35,25 @@ public class GreetingControllerBig {
 
     private Node weapons;
     private Document doc;
-    private   int idNext;
-    private   String filepath = "items.xml";
+    private int idNext;
+    private String filepath = "items.xml";
 
-    List<ShopBig> itemsList = new ArrayList<>();
+
+    List<ShopBig> shopList;
+
+
+    public GreetingControllerBig() {
+        try {
+            shopList = getItemsList();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @RequestMapping("/")
     public NilBig nil(String hello) {
@@ -77,15 +92,13 @@ public class GreetingControllerBig {
 
         BigDecimal currentMoney = money.getRubles();
 
-        List<ShopBig> shop = viewShop();
-
-        for(ShopBig sp : shop) {
+        for (ShopBig sp : shopList) {
             if (sp.getId().equals(item_id)) {
                 itemPice = sp.getPrice();
             }
         }
 
-        if (itemPice.compareTo(currentMoney) > 0){
+        if (itemPice.compareTo(currentMoney) > 0) {
             b.setError_code("Not enough money");
             return b;
         }
@@ -112,9 +125,7 @@ public class GreetingControllerBig {
         String item;
         BuyBig b = new BuyBig();
 
-        List<ShopBig> shop = viewShop();
-
-        for(ShopBig sp : shop) {
+        for (ShopBig sp : shopList) {
             if (sp.getId().equals(item_id)) {
                 itemPice = sp.getPrice();
             }
@@ -144,23 +155,17 @@ public class GreetingControllerBig {
     @RequestMapping("/view-shop")
     public List<ShopBig> viewShop() throws ParserConfigurationException, IOException, SAXException {
 
-        if (itemsList.isEmpty()){
-            System.out.println("empyty");
-            itemsList = getItemsList();
-
-        }else System.out.println("NOT EMPTY");
-
-        return itemsList;
+        return shopList;
     }
 
     public List<ShopBig> getItemsList() throws ParserConfigurationException, IOException, SAXException {
+
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+        List<ShopBig> itemsList = new ArrayList<>();
         doc = docBuilder.parse(filepath);
         weapons = doc.getElementsByTagName("weapons").item(0);
-
         ShopBig shop;
-
         NodeList list = weapons.getChildNodes();
         int lenght = list.getLength();
         for (int i = 0; i < lenght; i++) {
@@ -168,7 +173,7 @@ public class GreetingControllerBig {
             if ("weapon".equals(node.getNodeName())) {
                 shop = new ShopBig();
                 shop.setId(node.getAttributes().getNamedItem("id").getTextContent());
-                shop.setName(((Element)node).getElementsByTagName("name").item(0).getTextContent());
+                shop.setName(((Element) node).getElementsByTagName("name").item(0).getTextContent());
                 shop.setPrice(new BigDecimal(((Element) node).getElementsByTagName("price").item(0).getTextContent()));
                 itemsList.add(shop);
             }
