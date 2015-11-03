@@ -25,7 +25,7 @@ import java.util.List;
 
 @RestController
 public class GreetingControllerBig {
-//    private int itemPice;
+
     private BigDecimal itemPice;
 
     private String gnome_id;
@@ -85,7 +85,6 @@ public class GreetingControllerBig {
             }
         }
 
-//        if (itemPice > currentMoney){
         if (itemPice.compareTo(currentMoney) > 0){
             b.setError_code("Not enough money");
             return b;
@@ -146,8 +145,11 @@ public class GreetingControllerBig {
     public List<ShopBig> viewShop() throws ParserConfigurationException, IOException, SAXException {
 
         if (itemsList.isEmpty()){
-            return getItemsList();
-        }
+            System.out.println("empyty");
+            itemsList = getItemsList();
+
+        }else System.out.println("NOT EMPTY");
+
         return itemsList;
     }
 
