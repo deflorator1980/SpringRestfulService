@@ -22,7 +22,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.*;
-
 @RestController
 public class GreetingController {
 
@@ -38,7 +37,19 @@ public class GreetingController {
     private   int idNext;
     private   String filepath = "items.xml";
 
-    List<Shop> itemsList = new ArrayList<>();
+    List<Shop> shopList;
+
+    public GreetingController(){
+        try {
+            shopList = getItemsList();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        }
+    }
 
     @RequestMapping("/")
     public Nil nil(String hello) {
@@ -77,9 +88,7 @@ public class GreetingController {
 
         int currentMoney = money.getRubles();
 
-        List<Shop> shop = viewShop();
-
-        for(Shop sp : shop) {
+        for(Shop sp : shopList) {
             if (sp.getId().equals(item_id)) {
                 itemPice = sp.getPrice();
             }
@@ -108,13 +117,11 @@ public class GreetingController {
 
     @RequestMapping("/sell")
     public Buy sell(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
-        int quantity = 0;
+        int quantity;
         String item;
         Buy b = new Buy();
 
-        List<Shop> shop = viewShop();
-
-        for(Shop sp : shop) {
+        for(Shop sp : shopList) {
             if (sp.getId().equals(item_id)) {
                 itemPice = sp.getPrice();
             }
@@ -144,15 +151,14 @@ public class GreetingController {
     @RequestMapping("/view-shop")
     public List<Shop> viewShop() throws ParserConfigurationException, IOException, SAXException {
 
-        if (itemsList.isEmpty()){
-            return getItemsList();
-        }
-        return itemsList;
+
+        return shopList;
     }
 
     public List<Shop> getItemsList() throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+        List<Shop> itemsList = new ArrayList<>();
         doc = docBuilder.parse(filepath);
         weapons = doc.getElementsByTagName("weapons").item(0);
 
