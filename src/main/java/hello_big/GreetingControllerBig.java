@@ -86,6 +86,9 @@ public class GreetingControllerBig {
     @RequestMapping("/buy")
     public BuyBig buy(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
 
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        gnome_id = userDetails.getUsername();
+
         MoneyBig money = templates.getMoney(gnome_id);
 
         BuyBig b = new BuyBig();
@@ -121,7 +124,11 @@ public class GreetingControllerBig {
 
     @RequestMapping("/sell")
     public BuyBig sell(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
-        int quantity = 0;
+
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        gnome_id = userDetails.getUsername();
+
+        int quantity;
         String item;
         BuyBig b = new BuyBig();
 
