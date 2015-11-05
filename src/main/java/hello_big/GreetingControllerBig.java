@@ -60,8 +60,9 @@ public class GreetingControllerBig {
     @RequestMapping("/my-info")
     public ValuesMapBig myInfo() {
 
-        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        gnome_id = userDetails.getUsername();
+//        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        gnome_id = userDetails.getUsername();
+        gnome_id = "001";
 
         ValuesGnomeBig vg = templates.showValuesGnome(gnome_id);
 

@@ -32,4 +32,25 @@ public class ValuesMapBig {
     public void setItems(HashMap<String, Integer> items) {
         this.items = items;
     }
+
+    @Override
+    public String toString() {
+        return "ValuesMapBig{" +
+                "gnome_name='" + gnome_name + '\'' +
+                ", gnome_money=" + gnome_money +
+                ", items=" + items +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof ValuesMapBig)) {
+            return false;
+        }
+        ValuesMapBig that = (ValuesMapBig)obj;
+
+        return this.gnome_name.equals(that.gnome_name)
+                && this.gnome_money.equals(that.gnome_money)
+                && this.items.equals(that.items);
+    }
 }

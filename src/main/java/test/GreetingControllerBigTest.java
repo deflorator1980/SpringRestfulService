@@ -1,11 +1,11 @@
 package test;
 
-import hello_big.GreetingControllerBig;
-import hello_big.NilBig;
-import hello_big.ShopBig;
+import hello_big.*;
+import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -17,10 +17,10 @@ public class GreetingControllerBigTest {
     @org.junit.Test
     public void testViewShop() throws Exception {
         List<ShopBig> getItemList = greetingControllerBig.getItemsList();
-// constructor
-        assertEquals(greetingControllerBig.viewShop(), getItemList);
+
+        assertEquals(greetingControllerBig.viewShop(), getItemList);// constructor
+
         List<ShopBig> listEtalon = new ArrayList<>();
-//  view-shop
         ShopBig shopBigEtalon = new ShopBig();
         shopBigEtalon.setId("01");
         shopBigEtalon.setName("sword");
@@ -45,10 +45,22 @@ public class GreetingControllerBigTest {
         listEtalon.add(shopBigEtalon);
 
         assertEquals(listEtalon, getItemList);
+    }
 
-// nill
+    @Test
+    public void testNil() {
         NilBig nilEtalon = new NilBig("Hello");
         assertEquals(nilEtalon, greetingControllerBig.nil(""));
+    }
 
+    @Test
+    public void testMyInfoVova() {
+        ValuesMapBig vmEtalon = new ValuesMapBig();
+        vmEtalon.setGnome_name("vova");
+        vmEtalon.setGnome_money(new BigDecimal("6.00"));
+        HashMap<String, Integer> armsEtalon = new HashMap<>();
+        armsEtalon.put("spear", 1);
+        vmEtalon.setItems(armsEtalon);
+        assertEquals(vmEtalon, greetingControllerBig.myInfo());
     }
 }
