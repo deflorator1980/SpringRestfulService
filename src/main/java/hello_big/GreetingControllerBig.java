@@ -62,7 +62,7 @@ public class GreetingControllerBig {
 
 //        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 //        gnome_id = userDetails.getUsername();
-        gnome_id = "001";
+        gnome_id = "003";
 
         ValuesGnomeBig vg = templates.showValuesGnome(gnome_id);
 

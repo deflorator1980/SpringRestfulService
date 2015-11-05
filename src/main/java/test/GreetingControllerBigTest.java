@@ -53,7 +53,7 @@ public class GreetingControllerBigTest {
         assertEquals(nilEtalon, greetingControllerBig.nil(""));
     }
 
-    @Test
+//    @Test
     public void testMyInfoVova() {
         ValuesMapBig vmEtalon = new ValuesMapBig();
         vmEtalon.setGnome_name("vova");
@@ -63,4 +63,29 @@ public class GreetingControllerBigTest {
         vmEtalon.setItems(armsEtalon);
         assertEquals(vmEtalon, greetingControllerBig.myInfo());
     }
+
+//    @Test
+    public void testMyInfoDasha() {
+        ValuesMapBig vmEtalon = new ValuesMapBig();
+        vmEtalon.setGnome_name("dasha");
+        vmEtalon.setGnome_money(new BigDecimal("324242345325274.23"));
+        HashMap<String, Integer> armsEtalon = new HashMap<>();
+        armsEtalon.put("sword", 5);
+        vmEtalon.setItems(armsEtalon);
+        assertEquals(vmEtalon, greetingControllerBig.myInfo());
+    }
+
+    @Test
+    public void testMyInfoYasha() {
+        ValuesMapBig vmEtalon = new ValuesMapBig();
+        vmEtalon.setGnome_name("yasha");
+        vmEtalon.setGnome_money(new BigDecimal("1236.12"));
+        HashMap<String, Integer> armsEtalon = new HashMap<>();
+        armsEtalon.put("sword", 4);
+        armsEtalon.put("grenade", 3);
+        vmEtalon.setItems(armsEtalon);
+        assertEquals(vmEtalon, greetingControllerBig.myInfo());
+    }
+
+
 }
