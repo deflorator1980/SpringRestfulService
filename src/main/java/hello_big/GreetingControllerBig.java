@@ -162,7 +162,7 @@ public class GreetingControllerBig {
         return shopList;
     }
 
-    public List<ShopBig> getItemsList() throws ParserConfigurationException, IOException, SAXException {
+    public  List<ShopBig> getItemsList() throws ParserConfigurationException, IOException, SAXException {
 
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();

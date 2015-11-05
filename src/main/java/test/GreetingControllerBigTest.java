@@ -10,7 +10,6 @@ public class GreetingControllerBigTest {
 
     @org.junit.Test
     public void testViewShop() throws Exception {
-        assertEquals(greetingControllerBig.viewShop(), greetingControllerBig.viewShop());
-
+        assertEquals(greetingControllerBig.viewShop(), greetingControllerBig.getItemsList());
     }
 }

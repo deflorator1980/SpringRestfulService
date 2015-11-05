@@ -2,9 +2,7 @@ package hello_big;
 
 import java.math.BigDecimal;
 
-/**
- * Created by a on 01.11.15.
- */
+
 public class ShopBig {
     private String id;
     private String name;
@@ -32,5 +30,27 @@ public class ShopBig {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "ShopBig{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if(!(obj instanceof ShopBig)){
+            return false;
+        }
+        ShopBig that = (ShopBig) obj;
+        return this.id.equals(that.id)
+                && this.name.equals(that.name)
+                && this.price.equals(that.price);
+
     }
 }
