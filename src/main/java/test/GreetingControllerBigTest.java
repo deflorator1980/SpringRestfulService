@@ -1,6 +1,7 @@
 package test;
 
 import hello_big.GreetingControllerBig;
+import hello_big.NilBig;
 import hello_big.ShopBig;
 
 import java.math.BigDecimal;
@@ -15,10 +16,11 @@ public class GreetingControllerBigTest {
 
     @org.junit.Test
     public void testViewShop() throws Exception {
-        assertEquals(greetingControllerBig.viewShop(), greetingControllerBig.getItemsList());
-
+        List<ShopBig> getItemList = greetingControllerBig.getItemsList();
+// constructor
+        assertEquals(greetingControllerBig.viewShop(), getItemList);
         List<ShopBig> listEtalon = new ArrayList<>();
-
+//  view-shop
         ShopBig shopBigEtalon = new ShopBig();
         shopBigEtalon.setId("01");
         shopBigEtalon.setName("sword");
@@ -42,6 +44,11 @@ public class GreetingControllerBigTest {
 
         listEtalon.add(shopBigEtalon);
 
-        assertEquals(listEtalon, greetingControllerBig.getItemsList());
+        assertEquals(listEtalon, getItemList);
+
+// nill
+        NilBig nilEtalon = new NilBig("Hello");
+        assertEquals(nilEtalon, greetingControllerBig.nil(""));
+
     }
 }

@@ -1,8 +1,6 @@
 package hello_big;
 
-/**
- * Created by a on 01.11.15.
- */
+
 public class NilBig {
     String hello;
 
@@ -12,5 +10,23 @@ public class NilBig {
 
     public String getHello() {
         return hello;
+    }
+
+    @Override
+    public String toString() {
+        return "NilBig{" +
+                "hello='" + hello + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof NilBig)){
+            return false;
+        }
+
+        NilBig that = (NilBig) obj;
+        return this.hello.equals(that.hello)
+                && this.hello.equals(that.hello);
     }
 }
