@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="compate viewShop &amp; getItemList">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello_big/GreetingControllerBig.class" afterPath="$PROJECT_DIR$/target/classes/hello_big/GreetingControllerBig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test/GreetingControllerBigTest.class" afterPath="$PROJECT_DIR$/target/classes/test/GreetingControllerBigTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello_big/ShopBig.class" afterPath="$PROJECT_DIR$/target/classes/hello_big/ShopBig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test/TestRunner.class" afterPath="$PROJECT_DIR$/target/classes/test/TestRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java" afterPath="$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java" />
+    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello_big/ShopBig.java" afterPath="$PROJECT_DIR$/src/main/java/hello_big/ShopBig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/TestRunner.java" afterPath="$PROJECT_DIR$/src/main/java/test/TestRunner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SpringRestfulService.iws" />
@@ -37,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
+              <caret line="164" column="26" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1552#1553#0" expanded="true" />
@@ -51,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ShopBig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#508#509#0" expanded="true" />
                 <element signature="e#542#543#0" expanded="true" />
@@ -60,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39285713">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,14 +65,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GreetingControllerBigTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GreetingControllerBigTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.72727275">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="items.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/items.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -215,9 +218,9 @@
         <option value="$PROJECT_DIR$/src/main/java/tests/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/GreetingControllerBigTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ShopBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/TestRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java" />
       </list>
     </option>
   </component>
@@ -751,7 +754,7 @@
       <workItem from="1446386438875" duration="5613000" />
       <workItem from="1446404520694" duration="2053000" />
       <workItem from="1446553732493" duration="9626000" />
-      <workItem from="1446634334473" duration="7332000" />
+      <workItem from="1446634334473" duration="10389000" />
     </task>
     <task id="LOCAL-00001" summary="buy prerfect">
       <created>1444607963947</created>
@@ -861,11 +864,17 @@
       <option name="project" value="LOCAL" />
       <updated>1446634717384</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="compate viewShop &amp; getItemList">
+      <created>1446744794096</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1446744794096</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96278000" />
+    <option name="totallyTimeSpent" value="99335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -873,13 +882,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2876304" sideWeight="0.5057648" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29955292" sideWeight="0.49423522" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29955292" sideWeight="0.49423522" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -976,8 +985,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#303#304#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1056,8 +1065,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#303#304#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1128,8 +1137,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#303#304#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1198,14 +1207,6 @@
     <entry file="file://$PROJECT_DIR$/commands_examples.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/items.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/BaughtItemBig.java">
@@ -1352,23 +1353,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ApplicationBig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3068182">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#303#304#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1376,7 +1377,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
+          <caret line="164" column="26" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1552#1553#0" expanded="true" />
@@ -1388,7 +1389,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ShopBig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#508#509#0" expanded="true" />
             <element signature="e#542#543#0" expanded="true" />
@@ -1396,10 +1397,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
+    <entry file="file://$PROJECT_DIR$/items.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39285713">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72727275">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
