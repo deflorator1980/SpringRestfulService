@@ -26,7 +26,7 @@ import java.util.List;
 @RestController
 public class GreetingControllerBig {
 
-    private BigDecimal itemPice;
+    private BigDecimal itemPrice;
 
     private String gnome_id;
 
@@ -66,6 +66,8 @@ public class GreetingControllerBig {
 
         ValuesGnomeBig vg = templates.showValuesGnome(gnome_id);
 
+        System.out.println(vg);
+
         List<ValuesItemBig> lvi = templates.showValuesItem(gnome_id);
 
         ValuesMapBig vm = new ValuesMapBig();
@@ -95,11 +97,11 @@ public class GreetingControllerBig {
 
         for (ShopBig sp : shopList) {
             if (sp.getId().equals(item_id)) {
-                itemPice = sp.getPrice();
+                itemPrice = sp.getPrice();
             }
         }
 
-        if (itemPice.compareTo(currentMoney) > 0) {
+        if (itemPrice.compareTo(currentMoney) > 0) {
             b.setError_code("Not enough money");
             return b;
         }
@@ -108,13 +110,13 @@ public class GreetingControllerBig {
 
         for (BaughtItemBig bi : lbi) {
             if (bi.getItem().equals(item_id)) {
-                templates.buyItemOld(gnome_id, item_id, itemPice);
+                templates.buyItemOld(gnome_id, item_id, itemPrice);
                 b.setItem_name(item_id);
                 b.setError_code("OK");
                 return b;
             }
         }
-        templates.buyItemNew(gnome_id, item_id, itemPice);
+        templates.buyItemNew(gnome_id, item_id, itemPrice);
         b.setItem_name(item_id);
         b.setError_code("OK");
         return b;
@@ -132,7 +134,7 @@ public class GreetingControllerBig {
 
         for (ShopBig sp : shopList) {
             if (sp.getId().equals(item_id)) {
-                itemPice = sp.getPrice();
+                itemPrice = sp.getPrice();
             }
         }
 
@@ -142,12 +144,12 @@ public class GreetingControllerBig {
             quantity = bi.getQuantity();
             item = bi.getItem();
             if (item.equals(item_id) && (quantity > 1)) {
-                templates.sellItemOld(gnome_id, item_id, itemPice);
+                templates.sellItemOld(gnome_id, item_id, itemPrice);
                 b.setItem_name(item_id);
                 b.setError_code("OK");
                 return b;
             } else if (item.equals(item_id) && quantity == 1) {
-                templates.sellItemLast(gnome_id, item_id, itemPice);
+                templates.sellItemLast(gnome_id, item_id, itemPrice);
                 b.setItem_name(item_id);
                 b.setError_code("OK");
                 return b;
