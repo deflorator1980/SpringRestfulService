@@ -38,8 +38,6 @@ public class ValuesGnomeBig {
 
         ValuesGnomeBig that = (ValuesGnomeBig) o;
 
-//        if (gnome_name != null ? !gnome_name.equals(that.gnome_name) : that.gnome_name != null) return false;
-//        return !(gnome_money != null ? !gnome_money.equals(that.gnome_money) : that.gnome_money != null);
         return !(gnome_name != null ? !gnome_name.equals(that.gnome_name) : that.gnome_name != null)
                 && !(gnome_money != null ? !gnome_money.equals(that.gnome_money) : that.gnome_money != null);
     }
