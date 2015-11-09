@@ -1,6 +1,7 @@
 package test;
 
 
+import hello_big.MoneyBig;
 import hello_big.TemplatesBig;
 import hello_big.ValuesGnomeBig;
 import hello_big.ValuesItemBig;
@@ -57,5 +58,14 @@ public class TemplatesBigTest {
         lviEtalon.add(vib2);
         List<ValuesItemBig> lvi = templates.showValuesItem("003");
         assertEquals(lviEtalon, lvi);
+    }
+
+    @Test public void testGetMoney(){
+        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
+        TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
+        MoneyBig mbEtalon = new MoneyBig();
+        mbEtalon.setRubles(new BigDecimal("1236.12"));
+        assertEquals(mbEtalon, templates.getMoney("003"));
+
     }
 }

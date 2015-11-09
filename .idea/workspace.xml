@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="templates.showValuesItem">
+    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello_big/ValuesGnomeBig.class" afterPath="$PROJECT_DIR$/target/classes/hello_big/ValuesGnomeBig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello_big/ValuesItemBig.class" afterPath="$PROJECT_DIR$/target/classes/hello_big/ValuesItemBig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello_big/MoneyBig.java" afterPath="$PROJECT_DIR$/src/main/java/hello_big/MoneyBig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello_big/ValuesGnomeBig.java" afterPath="$PROJECT_DIR$/src/main/java/hello_big/ValuesGnomeBig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello_big/ValuesItemBig.java" afterPath="$PROJECT_DIR$/src/main/java/hello_big/ValuesItemBig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SpringRestfulService.iws" />
@@ -28,6 +29,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="GreetingControllerBig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="152" column="40" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GreetingControllerBigTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,12 +51,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GreetingControllerBig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java">
+      <file leaf-file-name="TemplatesBigTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7477064">
+              <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="152" column="40" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoneyBig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/MoneyBig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,42 +90,21 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/TemplatesBig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="107" selection-start-line="36" selection-start-column="22" selection-end-line="37" selection-end-column="107" />
+              <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
               <folding>
                 <marker date="1446632010082" expanded="true" signature="1058:1119" placeholder="select gnome..gnomes..." />
+                <marker date="1446632010082" expanded="true" signature="1312:1494" placeholder="select items..gnomes..." />
+                <marker date="1446632010082" expanded="true" signature="1859:1919" placeholder="UPDATE gnome..." />
+                <marker date="1446632010082" expanded="true" signature="2024:2088" placeholder="insert into ..." />
+                <marker date="1446632010082" expanded="true" signature="2483:2532" placeholder="SELECT gnome..gnomes..." />
+                <marker date="1446632010082" expanded="true" signature="2734:2786" placeholder="select item_..sales..." />
+                <marker date="1446632010082" expanded="true" signature="3156:3248" placeholder="update sales..." />
+                <marker date="1446632010082" expanded="true" signature="3355:3440" placeholder="UPDATE gnome..." />
+                <marker date="1446632010082" expanded="true" signature="4050:4135" placeholder="update gnome..." />
+                <marker date="1446632010082" expanded="true" signature="4244:4292" placeholder="delete from ..." />
+                <marker date="1446632010082" expanded="true" signature="4902:4994" placeholder="update sales..." />
+                <marker date="1446632010082" expanded="true" signature="5101:5186" placeholder="update gnome..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TemplatesBigTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5527523">
-              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValuesItemBig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ValuesItemBig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="124" selection-start-line="39" selection-start-column="124" selection-end-line="39" selection-end-column="124" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValuesGnomeBig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ValuesGnomeBig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="41" selection-end-column="109" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/main/java/hello_big/Nil.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/changes.py" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/MappersGnomeBig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello_big/MoneyBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/MapperMoneyBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/TemplatesBig.java" />
@@ -170,6 +184,7 @@
         <option value="$PROJECT_DIR$/src/main/java/test/JustRun.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ValuesGnomeBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ValuesItemBig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello_big/MoneyBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java" />
       </list>
     </option>
@@ -315,6 +330,22 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="75" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="95" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="101" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1000" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="75" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="95" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="101" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1000" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -744,7 +775,7 @@
       <workItem from="1446915578471" duration="3293000" />
       <workItem from="1447016667710" duration="223000" />
       <workItem from="1447016938315" duration="337000" />
-      <workItem from="1447017327714" duration="5751000" />
+      <workItem from="1447017327714" duration="8318000" />
     </task>
     <task id="LOCAL-00001" summary="buy prerfect">
       <created>1444607963947</created>
@@ -890,11 +921,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447022276962</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="templates.showValuesItem">
+      <created>1447024464635</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1447024464635</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117213000" />
+    <option name="totallyTimeSpent" value="119780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -908,7 +945,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30551416" sideWeight="0.49423522" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1053,6 +1090,17 @@
           <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
           <folding>
             <marker date="1446632010082" expanded="true" signature="1058:1119" placeholder="select gnome..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="1312:1494" placeholder="select items..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="1859:1919" placeholder="UPDATE gnome..." />
+            <marker date="1446632010082" expanded="true" signature="2024:2088" placeholder="insert into ..." />
+            <marker date="1446632010082" expanded="true" signature="2483:2532" placeholder="SELECT gnome..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="2734:2786" placeholder="select item_..sales..." />
+            <marker date="1446632010082" expanded="true" signature="3156:3248" placeholder="update sales..." />
+            <marker date="1446632010082" expanded="true" signature="3355:3440" placeholder="UPDATE gnome..." />
+            <marker date="1446632010082" expanded="true" signature="4050:4135" placeholder="update gnome..." />
+            <marker date="1446632010082" expanded="true" signature="4244:4292" placeholder="delete from ..." />
+            <marker date="1446632010082" expanded="true" signature="4902:4994" placeholder="update sales..." />
+            <marker date="1446632010082" expanded="true" signature="5101:5186" placeholder="update gnome..." />
           </folding>
         </state>
       </provider>
@@ -1109,6 +1157,17 @@
           <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
           <folding>
             <marker date="1446632010082" expanded="true" signature="1058:1119" placeholder="select gnome..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="1312:1494" placeholder="select items..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="1859:1919" placeholder="UPDATE gnome..." />
+            <marker date="1446632010082" expanded="true" signature="2024:2088" placeholder="insert into ..." />
+            <marker date="1446632010082" expanded="true" signature="2483:2532" placeholder="SELECT gnome..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="2734:2786" placeholder="select item_..sales..." />
+            <marker date="1446632010082" expanded="true" signature="3156:3248" placeholder="update sales..." />
+            <marker date="1446632010082" expanded="true" signature="3355:3440" placeholder="UPDATE gnome..." />
+            <marker date="1446632010082" expanded="true" signature="4050:4135" placeholder="update gnome..." />
+            <marker date="1446632010082" expanded="true" signature="4244:4292" placeholder="delete from ..." />
+            <marker date="1446632010082" expanded="true" signature="4902:4994" placeholder="update sales..." />
+            <marker date="1446632010082" expanded="true" signature="5101:5186" placeholder="update gnome..." />
           </folding>
         </state>
       </provider>
@@ -1165,6 +1224,17 @@
           <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
           <folding>
             <marker date="1446632010082" expanded="true" signature="1058:1119" placeholder="select gnome..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="1312:1494" placeholder="select items..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="1859:1919" placeholder="UPDATE gnome..." />
+            <marker date="1446632010082" expanded="true" signature="2024:2088" placeholder="insert into ..." />
+            <marker date="1446632010082" expanded="true" signature="2483:2532" placeholder="SELECT gnome..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="2734:2786" placeholder="select item_..sales..." />
+            <marker date="1446632010082" expanded="true" signature="3156:3248" placeholder="update sales..." />
+            <marker date="1446632010082" expanded="true" signature="3355:3440" placeholder="UPDATE gnome..." />
+            <marker date="1446632010082" expanded="true" signature="4050:4135" placeholder="update gnome..." />
+            <marker date="1446632010082" expanded="true" signature="4244:4292" placeholder="delete from ..." />
+            <marker date="1446632010082" expanded="true" signature="4902:4994" placeholder="update sales..." />
+            <marker date="1446632010082" expanded="true" signature="5101:5186" placeholder="update gnome..." />
           </folding>
         </state>
       </provider>
@@ -1195,24 +1265,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/MappersBig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/MappersGnomeBig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16380656">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/MoneyBig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1310,22 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/my-info.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ShopBig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.44266054">
@@ -1342,13 +1382,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/TemplatesBig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ValuesGnomeBig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="107" selection-start-line="36" selection-start-column="22" selection-end-line="37" selection-end-column="107" />
-          <folding>
-            <marker date="1446632010082" expanded="true" signature="1058:1119" placeholder="select gnome..gnomes..." />
-          </folding>
+        <state vertical-scroll-proportion="0.6330275">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="41" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ValuesItemBig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91972476">
+          <caret line="39" column="124" selection-start-line="39" selection-start-column="124" selection-end-line="39" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/my-info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48165137">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1370,26 +1424,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ValuesGnomeBig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/TemplatesBig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="41" selection-end-column="109" />
+          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+          <folding>
+            <marker date="1446632010082" expanded="true" signature="1058:1119" placeholder="select gnome..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="1312:1494" placeholder="select items..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="1859:1919" placeholder="UPDATE gnome..." />
+            <marker date="1446632010082" expanded="true" signature="2024:2088" placeholder="insert into ..." />
+            <marker date="1446632010082" expanded="true" signature="2483:2532" placeholder="SELECT gnome..gnomes..." />
+            <marker date="1446632010082" expanded="true" signature="2734:2786" placeholder="select item_..sales..." />
+            <marker date="1446632010082" expanded="true" signature="3156:3248" placeholder="update sales..." />
+            <marker date="1446632010082" expanded="true" signature="3355:3440" placeholder="UPDATE gnome..." />
+            <marker date="1446632010082" expanded="true" signature="4050:4135" placeholder="update gnome..." />
+            <marker date="1446632010082" expanded="true" signature="4244:4292" placeholder="delete from ..." />
+            <marker date="1446632010082" expanded="true" signature="4902:4994" placeholder="update sales..." />
+            <marker date="1446632010082" expanded="true" signature="5101:5186" placeholder="update gnome..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/MappersBig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/ValuesItemBig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="124" selection-start-line="39" selection-start-column="124" selection-end-line="39" selection-end-column="124" />
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/MoneyBig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5527523">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.7477064">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
