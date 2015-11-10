@@ -1,10 +1,7 @@
 package test;
 
 
-import hello_big.MoneyBig;
-import hello_big.TemplatesBig;
-import hello_big.ValuesGnomeBig;
-import hello_big.ValuesItemBig;
+import hello_big.*;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -60,12 +57,28 @@ public class TemplatesBigTest {
         assertEquals(lviEtalon, lvi);
     }
 
-    @Test public void testGetMoney(){
+    @Test
+    public void testGetMoney(){
         ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
         TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
         MoneyBig mbEtalon = new MoneyBig();
         mbEtalon.setRubles(new BigDecimal("1236.12"));
         assertEquals(mbEtalon, templates.getMoney("003"));
+    }
 
+    @Test
+    public void testGetBaughtItem() {
+        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
+        TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
+        List<BaughtItemBig> testLbi = new ArrayList<>();
+        BaughtItemBig testBi =  new BaughtItemBig();
+        testBi.setItem("03");
+        testBi.setQuantity(3);
+        BaughtItemBig testBi2 =  new BaughtItemBig();
+        testBi2.setItem("01");
+        testBi2.setQuantity(4);
+        testLbi.add(testBi2);
+        testLbi.add(testBi);
+        assertEquals(testLbi, templates.getBaughtItem("003"));
     }
 }
