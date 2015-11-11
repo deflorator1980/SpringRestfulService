@@ -60,9 +60,9 @@ public class GreetingControllerBig {
     @RequestMapping("/my-info")
     public ValuesMapBig myInfo() {
 
-        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        gnome_id = userDetails.getUsername();
-//        gnome_id = "003";
+//        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        gnome_id = userDetails.getUsername();
+        gnome_id = "001";
 
         ValuesGnomeBig vg = templates.showValuesGnome(gnome_id);
 
@@ -81,11 +81,14 @@ public class GreetingControllerBig {
         return vm;
     }
 
+
     @RequestMapping("/buy")
     public BuyBig buy(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
 
-        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        gnome_id = userDetails.getUsername();
+//        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        gnome_id = userDetails.getUsername();
+        gnome_id = "001";
+        item_id = "01";
 
         MoneyBig money = templates.getMoney(gnome_id);
 

@@ -20,4 +20,30 @@ public class BuyBig {
     public void setError_code(String error_code) {
         this.error_code = error_code;
     }
+
+    @Override
+    public String toString() {
+        return "BuyBig{" +
+                "item_name='" + item_name + '\'' +
+                ", error_code='" + error_code + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        BuyBig buyBig = (BuyBig) o;
+
+        return !(item_name != null ? !item_name.equals(buyBig.item_name) : buyBig.item_name != null)
+                && !(error_code != null ? !error_code.equals(buyBig.error_code) : buyBig.error_code != null);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = item_name != null ? item_name.hashCode() : 0;
+        result = 31 * result + (error_code != null ? error_code.hashCode() : 0);
+        return result;
+    }
 }

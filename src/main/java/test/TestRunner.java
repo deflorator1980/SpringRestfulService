@@ -12,8 +12,8 @@ import java.io.IOException;
 
 public class TestRunner {
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
-//        Result result = JUnitCore.runClasses(GreetingControllerBigTest.class);
-        Result result = JUnitCore.runClasses(TemplatesBigTest.class);
+        Result result = JUnitCore.runClasses(GreetingControllerBigTest.class);
+//        Result result = JUnitCore.runClasses(TemplatesBigTest.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }
