@@ -111,7 +111,7 @@ public class TemplatesBigTest {
         assertEquals(testLbi, templates.getBaughtItem("003"));
     }
 
-    @Test
+//    @Test
     public void testSellItemLast() {
         templates.sellItemLast("001", "02", new BigDecimal("4"));
         MoneyBig testM = new MoneyBig();
@@ -119,5 +119,20 @@ public class TemplatesBigTest {
         assertEquals(testM, templates.getMoney("001"));
 
         assertEquals(new ArrayList(), templates.getBaughtItem("001"));
+    }
+
+    @Test
+    public void testSellItemOld() {
+        templates.sellItemOld("002", "01", new BigDecimal("10.00"));
+        MoneyBig testM = new MoneyBig();
+        testM.setRubles(new BigDecimal("324242345325284.23"));
+        assertEquals(testM, templates.getMoney("002"));
+
+        List<BaughtItemBig> testLbi = new ArrayList<>();
+        BaughtItemBig testBi = new BaughtItemBig();
+        testBi.setItem("01");
+        testBi.setQuantity(4);
+        testLbi.add(testBi);
+        assertEquals(testLbi, templates.getBaughtItem("002"));
     }
 }
