@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="testSellItemOld">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/JustRun.java" afterPath="$PROJECT_DIR$/src/main/java/test/JustRun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/my-info.txt" afterPath="$PROJECT_DIR$/src/main/java/test/my-info.txt" />
+    <list default="true" id="38ffd1be-db6d-47f5-8942-6bf573adf117" name="Default" comment="testSell">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello_big/BuyBig.class" afterPath="$PROJECT_DIR$/target/classes/hello_big/BuyBig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hello_big/GreetingControllerBig.class" afterPath="$PROJECT_DIR$/target/classes/hello_big/GreetingControllerBig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test/GreetingControllerBigTest.class" afterPath="$PROJECT_DIR$/target/classes/test/GreetingControllerBigTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test/TestRunner.class" afterPath="$PROJECT_DIR$/target/classes/test/TestRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java" afterPath="$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SpringRestfulService.iws" />
@@ -28,11 +31,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GreetingControllerBig.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GreetingControllerBig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="126" column="63" selection-start-line="126" selection-start-column="63" selection-end-line="126" selection-end-column="63" />
+              <folding>
+                <element signature="e#1553#1554#0" expanded="true" />
+                <element signature="e#1595#1596#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GreetingControllerBigTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <caret line="110" column="7" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -48,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JustRun.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JustRun.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/test/JustRun.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78571427">
+            <state vertical-scroll-proportion="0.0">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -60,11 +86,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BuyBig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/BuyBig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BaughtItemBig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/BaughtItemBig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <caret line="49" column="5" selection-start-line="31" selection-start-column="3" selection-end-line="49" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -150,7 +186,6 @@
         <option value="$PROJECT_DIR$/game.sql" />
         <option value="$PROJECT_DIR$/src/main/java/hello/ShopBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ApplicationBig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello_big/BuyBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/MapperBaugthItemBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ValuesBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/WebSecurityConfigBig.java" />
@@ -171,17 +206,18 @@
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ShopBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/NilBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ValuesMapBig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ValuesGnomeBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/ValuesItemBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/MoneyBig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/BaughtItemBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello_big/TemplatesBig.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/my-info.txt" />
         <option value="$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/JustRun.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test/TestRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello_big/BuyBig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java" />
       </list>
     </option>
   </component>
@@ -210,6 +246,28 @@
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>ParameterCanBeLocal</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -233,6 +291,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,9 +365,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -732,8 +790,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.TestRunner" />
-        <item index="1" class="java.lang.String" itemvalue="Application.JustRun" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ApplicationBig" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ApplicationBig" />
+        <item index="2" class="java.lang.String" itemvalue="Application.JustRun" />
         <item index="3" class="java.lang.String" itemvalue="Clojure Application.Hui" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.GreetingControllerBigTest" />
       </list>
@@ -774,6 +832,7 @@
       <workItem from="1447017327714" duration="15137000" />
       <workItem from="1447179956470" duration="11934000" />
       <workItem from="1447238602617" duration="5373000" />
+      <workItem from="1447250162807" duration="3219000" />
     </task>
     <task id="LOCAL-00001" summary="buy prerfect">
       <created>1444607963947</created>
@@ -949,11 +1008,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447242029051</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="testBuy">
+      <created>1447252364871</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1447252364871</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143906000" />
+    <option name="totallyTimeSpent" value="147125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -1029,8 +1094,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GreetingController clean" />
-    <MESSAGE value="nothing superfluous" />
     <MESSAGE value="one package" />
     <MESSAGE value="database game" />
     <MESSAGE value="ok" />
@@ -1054,7 +1117,9 @@
     <MESSAGE value="testBuyItemOld" />
     <MESSAGE value="testSellItemLast" />
     <MESSAGE value="testSellItemOld" />
-    <option name="LAST_COMMIT_MESSAGE" value="testSellItemOld" />
+    <MESSAGE value="testBuy" />
+    <MESSAGE value="testSell" />
+    <option name="LAST_COMMIT_MESSAGE" value="testSell" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1099,7 +1164,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,7 +1241,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1240,7 +1311,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1299,13 +1373,6 @@
     <entry file="file://$PROJECT_DIR$/commands_examples.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/BuyBig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/MappersGnomeBig.java">
@@ -1413,10 +1480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#736#737#0" expanded="false" />
-            <element signature="e#797#798#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1424,14 +1487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13761468">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1447,31 +1502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="41" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/BaughtItemBig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3543123">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,14 +1526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/my-info.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test/TemplatesBigTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1516,10 +1538,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test/JustRun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78571427">
+        <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/BaughtItemBig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="5" selection-start-line="31" selection-start-column="3" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/BuyBig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/my-info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/GreetingControllerBigTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="7" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello_big/GreetingControllerBig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="126" column="63" selection-start-line="126" selection-start-column="63" selection-end-line="126" selection-end-column="63" />
+          <folding>
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -126,8 +126,10 @@ public class GreetingControllerBig {
     @RequestMapping("/sell")
     public BuyBig sell(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
 
-        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        gnome_id = userDetails.getUsername();
+//        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        gnome_id = userDetails.getUsername();
+        gnome_id = "002";
+        item_id = "02";
 
         int quantity;
         String item;

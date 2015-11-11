@@ -95,17 +95,32 @@ public class GreetingControllerBigTest {
         BuyBig testBb = new BuyBig();
         testBb.setError_code("OK");
         testBb.setItem_name("02");
-        System.out.println(greetingControllerBig.buy("002"));
         assertEquals(testBb, greetingControllerBig.buy("002"));
     }
 
-    @Test
+//    @Test
     public void testBuyNoMoney() throws ParserConfigurationException, SAXException, IOException {
         BuyBig testBb = new BuyBig();
         testBb.setError_code("Not enough money");
         testBb.setItem_name(null);
         System.out.println(greetingControllerBig.buy("001"));
         assertEquals(testBb, greetingControllerBig.buy("001"));
+    }
+
+//    @Test
+    public void testSell() throws ParserConfigurationException, SAXException, IOException {
+        BuyBig testBb = new BuyBig();
+        testBb.setError_code("OK");
+        testBb.setItem_name("01");
+        assertEquals(testBb, greetingControllerBig.sell("01"));
+    }
+
+    @Test
+    public void testSellNoItem() throws ParserConfigurationException, SAXException, IOException {
+        BuyBig testBb = new BuyBig();
+        testBb.setError_code("You haven't this item");
+        testBb.setItem_name(null);
+        assertEquals(testBb, greetingControllerBig.sell("02"));
     }
 
 
