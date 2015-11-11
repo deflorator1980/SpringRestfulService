@@ -15,12 +15,11 @@ import java.util.List;
 
 public class TemplatesBigTest {
     TemplatesBig templatesBig = new TemplatesBig();
+    ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
+    TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
 
     @Test
     public void testShowValuesGnome() {
-        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-        TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
-
         ValuesGnomeBig vgbEtalon = new ValuesGnomeBig();
         vgbEtalon.setGnome_name("yasha");
         vgbEtalon.setGnome_money(new BigDecimal("1236.12"));
@@ -29,8 +28,6 @@ public class TemplatesBigTest {
 
     @Test
     public void testShowValuesItem(){
-        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-        TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
         List<ValuesItemBig> lviEtalon = new ArrayList<>();
         ValuesItemBig vib = new ValuesItemBig();
         vib.setItem_name("spear");
@@ -42,8 +39,6 @@ public class TemplatesBigTest {
 
     @Test
     public void testShowValuesItem003(){
-        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-        TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
         List<ValuesItemBig> lviEtalon = new ArrayList<>();
         ValuesItemBig vib1 = new ValuesItemBig();
         ValuesItemBig vib2 = new ValuesItemBig();
@@ -59,8 +54,6 @@ public class TemplatesBigTest {
 
     @Test
     public void testGetMoney(){
-        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-        TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
         MoneyBig mbEtalon = new MoneyBig();
         mbEtalon.setRubles(new BigDecimal("1236.12"));
         assertEquals(mbEtalon, templates.getMoney("003"));
@@ -68,8 +61,6 @@ public class TemplatesBigTest {
 
     @Test
     public void testGetBaughtItem() {
-        ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
-        TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
         List<BaughtItemBig> testLbi = new ArrayList<>();
         BaughtItemBig testBi =  new BaughtItemBig();
         testBi.setItem("03");
@@ -80,5 +71,24 @@ public class TemplatesBigTest {
         testLbi.add(testBi2);
         testLbi.add(testBi);
         assertEquals(testLbi, templates.getBaughtItem("003"));
+    }
+
+    @Test
+    public void testBuyItemNew() {
+        templates.buyItemNew("002", "02", new BigDecimal("4"));
+        MoneyBig testM = new MoneyBig();
+        testM.setRubles(new BigDecimal("324242345325270.23"));
+        assertEquals(testM, templates.getMoney("002"));
+
+        List<BaughtItemBig> testLbi = new ArrayList<>();
+        BaughtItemBig testBi = new BaughtItemBig();
+        BaughtItemBig testBi2 = new BaughtItemBig();
+        testBi.setItem("01");
+        testBi.setQuantity(5);
+        testBi2.setItem("02");
+        testBi2.setQuantity(1);
+        testLbi.add(testBi);
+        testLbi.add(testBi2);
+        assertEquals(testLbi, templates.getBaughtItem("002"));
     }
 }

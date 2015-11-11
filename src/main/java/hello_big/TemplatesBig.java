@@ -11,9 +11,7 @@ import javax.sql.DataSource;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * Created by a on 01.11.15.
- */
+
 public class TemplatesBig {
     private DataSource dataSource;
     private JdbcTemplate jdbcTemplate;
@@ -49,13 +47,15 @@ public class TemplatesBig {
             String sqlGiveMoney = "UPDATE gnomes SET gnome_money=gnome_money-? WHERE gnome_id=?";
             jdbcTemplate.update(sqlGiveMoney, itemPrice, gnome_id);
 
+//            jdbcTemplate.update("hui");
+
             String sqlGetItem = "insert into sales (gnome_id, item_id, quantity) values (?, ?, 1);";
             jdbcTemplate.update(sqlGetItem, gnome_id, item_id);
 
             transactionManager.commit(status);
 
         } catch (DataAccessException dae) {
-            System.out.println("Error in creating record, rolling back");
+            System.out.println("Error in creating record, rolling back HUI HUI HUI!");
             transactionManager.rollback(status);
             throw dae;
         }

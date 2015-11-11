@@ -12,6 +12,7 @@ public class JustRun {
 //        System.out.println(tb.getClass());
         ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
         TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
-        System.out.println(templates.getBaughtItem("001"));
+//        System.out.println(templates.getBaughtItem("001"));
+
     }
 }
