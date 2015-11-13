@@ -67,7 +67,7 @@ public class TemplatesBig {
         return (MoneyBig) jdbcTemplate.queryForObject(sql, new Object[]{gnome_id}, new MapperMoneyBig());
     }
 
-    public List<BaughtItemBig> getBaughtItem(String gnome_id) {
+    public List getBaughtItem(String gnome_id) {
         String sql = "select item_id, quantity from sales where gnome_id=?";
         return jdbcTemplate.query(sql, new MapperBaughtItemBig(), gnome_id);
     }
@@ -124,6 +124,9 @@ public class TemplatesBig {
             String sqlDecQuantity = "update sales set quantity=quantity-1 where gnome_id=?"
                     + " and item_id=?";
             jdbcTemplate.update(sqlDecQuantity, gnome_id, item_id);
+
+            jdbcTemplate.update("hui");
+
 
             String sqlTakeMoney = "update gnomes set gnome_money=gnome_money+?"
                     + " where gnome_id=?";

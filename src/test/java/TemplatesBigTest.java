@@ -1,7 +1,13 @@
 import hello_big.*;
+import org.easymock.EasyMock;
+import org.easymock.EasyMockRunner;
+import org.easymock.Mock;
+import org.easymock.TestSubject;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.dao.DataAccessException;
 
 import static org.junit.Assert.*;
 
@@ -10,10 +16,15 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@RunWith(EasyMockRunner.class)
 public class TemplatesBigTest {
-    TemplatesBig templatesBig = new TemplatesBig();
     ApplicationContext ac = new FileSystemXmlApplicationContext("db.xml");
+
+    @TestSubject
     TemplatesBig templates = (TemplatesBig) ac.getBean("TemplatesBig");
+
+    @Mock
+    Itemplates itemplates;
 
 //    @Test
     public void testShowValuesGnome() {
@@ -118,7 +129,7 @@ public class TemplatesBigTest {
         assertEquals(new ArrayList(), templates.getBaughtItem("001"));
     }
 
-    @Test
+//    @Test
     public void testSellItemOld() {
         templates.sellItemOld("002", "01", new BigDecimal("10.00"));
         MoneyBig testM = new MoneyBig();
@@ -131,5 +142,12 @@ public class TemplatesBigTest {
         testBi.setQuantity(4);
         testLbi.add(testBi);
         assertEquals(testLbi, templates.getBaughtItem("002"));
+    }
+
+    @Test(expected = Exception.class)
+    public void mockSellItemOld() {
+        EasyMock.expect(itemplates.sellItemOld("002", "01", new BigDecimal("10.00"))).andThrow(new Exception());
+        EasyMock.replay(itemplates);
+        assertEquals(itemplates.sellItemOld("002", "01", new BigDecimal("10.00")), new Object());
     }
 }

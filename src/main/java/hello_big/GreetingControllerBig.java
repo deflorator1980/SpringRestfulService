@@ -62,7 +62,7 @@ public class GreetingControllerBig {
 
 //        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 //        gnome_id = userDetails.getUsername();
-        gnome_id = "001";
+        gnome_id = "002";
 
         ValuesGnomeBig vg = templates.showValuesGnome(gnome_id);
 
@@ -83,12 +83,12 @@ public class GreetingControllerBig {
 
 
     @RequestMapping("/buy")
-    public BuyBig buy(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
+    public BuyBig buy() throws IOException, SAXException, ParserConfigurationException {
 
 //        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 //        gnome_id = userDetails.getUsername();
-        gnome_id = "001";
-        item_id = "01";
+        gnome_id = "002";
+        String item_id = "01";
 
         MoneyBig money = templates.getMoney(gnome_id);
 
@@ -124,12 +124,12 @@ public class GreetingControllerBig {
     }
 
     @RequestMapping("/sell")
-    public BuyBig sell(@RequestParam(value = "item_id") String item_id) throws IOException, SAXException, ParserConfigurationException {
+    public BuyBig sell() throws IOException, SAXException, ParserConfigurationException {
 
 //        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 //        gnome_id = userDetails.getUsername();
         gnome_id = "002";
-        item_id = "02";
+        String item_id = "01";
 
         int quantity;
         String item;

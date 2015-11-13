@@ -93,7 +93,7 @@ public class GreetingControllerBigTest {
         BuyBig testBb = new BuyBig();
         testBb.setError_code("OK");
         testBb.setItem_name("02");
-        assertEquals(testBb, greetingControllerBig.buy("002"));
+        assertEquals(testBb, greetingControllerBig.buy());
     }
 
 //    @Test
@@ -101,8 +101,8 @@ public class GreetingControllerBigTest {
         BuyBig testBb = new BuyBig();
         testBb.setError_code("Not enough money");
         testBb.setItem_name(null);
-        System.out.println(greetingControllerBig.buy("001"));
-        assertEquals(testBb, greetingControllerBig.buy("001"));
+        System.out.println(greetingControllerBig.buy());
+        assertEquals(testBb, greetingControllerBig.buy());
     }
 
 //    @Test
@@ -110,7 +110,7 @@ public class GreetingControllerBigTest {
         BuyBig testBb = new BuyBig();
         testBb.setError_code("OK");
         testBb.setItem_name("01");
-        assertEquals(testBb, greetingControllerBig.sell("01"));
+        assertEquals(testBb, greetingControllerBig.sell());
     }
 
     @Test
@@ -118,7 +118,7 @@ public class GreetingControllerBigTest {
         BuyBig testBb = new BuyBig();
         testBb.setError_code("You haven't this item");
         testBb.setItem_name(null);
-        assertEquals(testBb, greetingControllerBig.sell("02"));
+        assertEquals(testBb, greetingControllerBig.sell());
     }
 
 
