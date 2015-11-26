@@ -54,7 +54,7 @@ public class GreetingControllerBigTest {
         assertEquals(nilEtalon, greetingControllerBig.nil(""));
     }
 
-    @Test
+//    @Test
     public void testMyInfoVova() {
         ValuesMapBig vmEtalon = new ValuesMapBig();
         vmEtalon.setGnome_name("vova");
@@ -113,7 +113,7 @@ public class GreetingControllerBigTest {
         assertEquals(testBb, greetingControllerBig.sell());
     }
 
-    @Test
+//    @Test
     public void testSellNoItem() throws ParserConfigurationException, SAXException, IOException {
         BuyBig testBb = new BuyBig();
         testBb.setError_code("You haven't this item");
